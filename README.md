@@ -11,6 +11,7 @@ This script will work with Active Directory and IT Glue to update the MSP's stor
 - There must be a flexible asset type that stores the Active Directory domain name, and its ID must be hard-coded into the script in the Find-MyOrganization function.  For our IT Glue tenant, that ID is 25110.
 - The installed version of Powershell on which the script is run must be at least version 3
 - The machine on which the script is run must have the ActiveDirectory PowerShell module installed.
+- The script must be run with sufficient AD privileges to make password changes.
 
 ### Submitter
 - David Hirsch, 11 June 2019
