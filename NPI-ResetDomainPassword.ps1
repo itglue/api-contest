@@ -24,14 +24,16 @@
 	Whether created passwords should be readable (like "Fox-In-Socks-1").  Default is false.
 
 .PARAMETER eventOutput
-	Boolean dictating whether errors are delivered to console or to the Application Event Log
+	Boolean dictating whether errors are delivered to console or to the Application Event Log.  Default is true.
 
 .PARAMETER eventSource
-	If errors are delivered to the event log, the name of the Event Source to use.
+	If errors are delivered to the event log, the name of the Event Source to use.  Default is 3DSecureAudit.
 
 .NOTES
 	3DSecureAudit event IDs are found here: https://3dcorp.itglue.com/1022742/docs/2670428
 
+	Version 1.6 2019-06-11 David Hirsch, NP Information Systems (davidh@npinfo.com)
+		Small non-functional changes for IT Glue API contest
 	Version 1.5 2019-03-05 David Hirsch, NP Information Systems (davidh@npinfo.com)
 		Changed default for readable passwords to false
 	Version 1.4 2019-03-05 David Hirsch, NP Information Systems (davidh@npinfo.com)
@@ -41,6 +43,8 @@
 	Version 1.2 2019-03-04 David Hirsch, NP Information Systems (davidh@npinfo.com)
 		First tested version
 #>
+#Requires -Modules ActiveDirectory
+#Requires -Version 3
 
 Param(
 	[Parameter()]
