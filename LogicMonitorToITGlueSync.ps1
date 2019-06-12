@@ -27,7 +27,7 @@ $headersitg = New-Object "System.Collections.Generic.Dictionary[[String],[String
 $headersitg.Add("x-api-key", $apikeyitg)
 $headersitg.Add("Content-Type",'application/vnd.api+json')
 
-#Logic monitor limits to 300 per transaction, Tektegrity logicmonitor has 600+ so we run through 3 times
+#Logic monitor limits to 300 per transaction, Our logicmonitor has 600+ so we run through 3 times
 $url = 'https://' + $company + '.logicmonitor.com/santaba/rest' + $resourcePath + '?size=300&filter=id<424'
 $url2 = 'https://' + $company + '.logicmonitor.com/santaba/rest' + $resourcePath + '?size=300&filter=id>424'
 $url3 = 'https://' + $company + '.logicmonitor.com/santaba/rest' + $resourcePath + '?size=300&filter=id>794'
