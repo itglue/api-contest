@@ -1,0 +1,14 @@
+BitLocker - Save to IT Glue
+
+ 
+
+Function:
+This script will locate all saved BitLocker recovery keys on a system and save each as an embedded password for that system's configuration in IT Glue. Keys are created per volume, so running this script on a system with multiple encrypted volumes will result in multiple embedded passwords, each named for the volume (BitLocker key for C:, BitLocker key for J:, etc.). To be clear, this type of BitLocker recovery key is the one that is saved to the system for automatic decryption of encrypted drives. This will not save the keys for any drives that need a key manually entered for decryption (typically encrypted portable drives) because that key is not saved to the system.
+
+ 
+
+Specific Use:
+This Powershell script is intended to run as a component in Datto RMM with the IT Glue API Key embedded in the component as an environment variable to prevent exposure. Datto RMM saves a GUID for the system in the registry, which the script uses to match to the correct configuration in IT Glue. This is probably similar for other RMM tools, but these sections may need to be rewritten to obtain and compare a different RMM GUID.
+
+Purpose:
+Microsoft has made BitLocker freely available for Windows 10 Pro. For security reasons, all devices which leave the premise or are publicly accessible, or may contain sensitive information (HIPAA, PCI-compliance, safe-harbor), should be encrypted with BitLocker. Even though we instruct our clients to save their BitLocker recovery key in a safe place, many users and clients misplace or lose their recovery key.  As such, we felt it was necessary to capture and record the BitLocker recovery key for each encrypted volume and manage that data centrally in ITGlue.  With this new ability to automatically save and record the BitLocker recovery keys centrally in ITGlue for all managed devices, we now have a way to recover the data in the case of motherboard replacement, drive issues, or for data recovery. With DattoRMM, saving this data to a user defined field (which is typically what would be done), would only store the current key.  If a failing drive were replaced and a new drive installed and encrypted, the saved key would be replaced with the new one and no way to access the data from the old drive. ITGlue's password versioning provides a fail-safe for recovering data from a drive as previous entries are maintained. With the ease of recovering BitLocker encrypted data, we can expand our client's deployment of BitLocker to all applicable devices without needing to worry about them losing or misplacing their BitLocker recovery key.
