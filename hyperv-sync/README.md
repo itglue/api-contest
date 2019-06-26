@@ -2,7 +2,7 @@
 2. Run `ITGlue-VMHost-CreateFlexibleAsset.ps1` once to create the flexible asset needed and add it to the side bar ("_VM Host_").
 3. Create a new _VM Host_ asset for each server you want to sync. Take note of individual IDs.  
 3a. subdomain.itglue.com/1234568/assets/records/**1153985665234565**  
-3b. You only need to give it a name and tag a related a configuration in IT Glue.
+3b. You only need to give it a name and tag a related a configuration in IT Glue when creating the assets.
 
 From here on, there are multiple options on how to specify the script's paramaters *(i.e. in the file, as paramaters when calling, via module settings)* but these instructions will explain how to store API settings via the module.
 
