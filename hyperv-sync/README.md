@@ -13,4 +13,6 @@ From here on, there are multiple options on how to specify the script's paramate
   
 **IMPORTANT: Do the next step as the user who will be running the script on the server**  
   
-6. Run `ITGlue-VMHost-Setup.ps1`. The script will ask for IT Glue API key, data center (EU/US) (if not saved already) and **flexible_asset_id**. It will save API key and data center via the module and create a new task in TaskScheduler under \ITGlueSync\ scheduled to run daily at the time when the setup was run.
+6. Run `ITGlue-VMHost-Setup.ps1`. If the IT Glue wrapper module settings are missing or not found, the script will ask for IT Glue API key and data center (EU/US). These will be saved with `Export-ITGlueModuleSettings`. Next it will ask for **flexible_asset_id** and **subdomain**. These variables will be saved in the scheduled task.
+  
+The script will now run once every day at the time `ITGlue-VMHost-Setup.ps1` was run. It will detect changes and only updated if something changes or "Force manual sync now" is set to "Yes".
