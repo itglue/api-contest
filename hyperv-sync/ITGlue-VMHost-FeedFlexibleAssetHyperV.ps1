@@ -93,7 +93,7 @@ Write-Verbose "Creating hashtable with HTML name and rest of data..."
 $VMs = @{}
 foreach($vm in Get-VM) {
     $htmlname = $vm.name
-    
+
     if($configurations[$vm.Name]) {
         $htmlname = '<a href="{0}/{1}/configurations/{2}">{3}</a>' -f $url,  $configurations[$vm.Name].attributes.'organization-id',  $configurations[$vm.Name].id, $vm.name
     } elseif($MACs[($vm.Name | Get-VMNetworkAdapter).MacAddress]) {
@@ -286,18 +286,13 @@ $guestNICsIPsHTML = '<div>
         </tbody>
     </table>
 </div>' -f ((Get-VMNetworkAdapter * | Sort 'VMName').foreach{
-    $macAddr = $_.MacAddress
-    for($i=2; $i -lt $macAddr.Length; $i=$i+3) {
-        $macAddr = $macAddr.Insert($i,':')
-    }
-
     '<tr>
         <td>{0}</td>
         <td>{1}</td>
         <td>{2}</td>
         <td>{3}</td>
         <td>{4}</td>
-    </tr>' -f $VMs[$_.VMName].htmlname, $_.switchname, $_.ipaddresses[0], $_.ipaddresses[1], $macAddr } | Out-String)
+    </tr>' -f $VMs[$_.VMName].htmlname, $_.switchname, $_.ipaddresses[0], $_.ipaddresses[1], $($_.MacAddress -replace '(..(?!$))','$1:') } | Out-String)
 Write-Verbose "VM NICs done. [7/7]"
 
 
