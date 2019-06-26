@@ -4,7 +4,7 @@
 3a. subdomain.itglue.com/1234568/assets/records/**1153985665234565**  
 3b. You only need to give it a name and tag a related a configuration in IT Glue when creating the assets.
 
-From here on, there are multiple options on how to specify the script's paramaters *(i.e. in the file, as paramaters when calling, via module settings)* but these instructions will explain how to store API settings via the module.
+From here on, there are multiple options on how to specify the script's paramaters *(i.e. in the file, as paramaters when calling, via module settings)* but these instructions will store API settings via the wrapper module and asset ID in the scheduled task.
 
 4. Assign subdomain to the variable **subdomain** in the script.  
 4a. If you login on happyfrog.itglue.com, enter happyfrog: `[string]$subdomain = 'happyfrog'`.  
