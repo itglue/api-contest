@@ -220,7 +220,7 @@ VMware"
                     type = "flexible_asset_fields"
                     Attributes = @{
                         order = 16
-                        Name = "Force manual sync now?"
+                        Name = "Force manual sync?"
                         kind = "Select"
                         required = $false
                         use_for_title = $false
