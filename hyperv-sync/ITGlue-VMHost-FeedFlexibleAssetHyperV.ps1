@@ -40,7 +40,7 @@ if($api_key) {
     # Use API key imported from module settings
     Write-Verbose "Using API key from module settings already saved."
 } else {
-    return "No API key was found or specified, please use -api_key to specify it and run the script again. This script will not continue."
+    return "No API key was found or specified, please use -api_key to specify it and run the script again."
 }
 
 if($data_center) {
@@ -51,7 +51,7 @@ if($data_center) {
     # Use URL imported from module settings
     Write-Verbose "Using URL from module settings already saved."
 } else {
-    return "No data center was found or specified, please use -data_center to specify it (US or EU) and run the script again. This script will not continue."
+    return "No data center was found or specified, please use -data_center to specify it (US or EU) and run the script again."
 }
 
 if(!$flexible_asset_id) {
@@ -74,12 +74,16 @@ Write-Verbose "Done."
 
 Write-Verbose "Retrieving configurations from IT Glue (org id: $organization_id)..."
 $configurations = @{}
+$MACs = @{}
 $page_number = 1
 do{
     Write-Verbose "Calling the IT Glue api (page $page_number)..."
     $api_call = Get-ITGlueConfigurations -organization_id $organization_id -page_size 1000 -page_number ($page_number++)
     foreach($_ in $api_call.data) {
         $configurations[$_.attributes.name] = $_
+        if($_.attributes.'mac-address') {
+            $MACs[$_.attributes.'mac-address'.replace(':','')] = $_
+        }
     }
 } while($api_call.links.next)
 Write-Verbose "Done."
@@ -89,15 +93,18 @@ Write-Verbose "Creating hashtable with HTML name and rest of data..."
 $VMs = @{}
 foreach($vm in Get-VM) {
     $htmlname = $vm.name
-
+    
     if($configurations[$vm.Name]) {
-        $htmlname = '<a href="{0}/{1}/configurations/{2}">{3}</a>' -f $url,  $configurations[$vm.Name].attributes.'organization-id',  $configurations[$vm.Name].id, $vm.name 
+        $htmlname = '<a href="{0}/{1}/configurations/{2}">{3}</a>' -f $url,  $configurations[$vm.Name].attributes.'organization-id',  $configurations[$vm.Name].id, $vm.name
+    } elseif($MACs[($vm.Name | Get-VMNetworkAdapter).MacAddress]) {
+        $config = $MACs[($vm.Name | Get-VMNetworkAdapter).MacAddress]
+        $htmlname = '<a href="{0}/{1}/configurations/{2}">{3}</a>' -f $url,  $config.attributes.'organization-id',  $config.id, $config.attributes.name
     } else {
         $configurations.GetEnumerator() | Where {$_.Name -like "*$($vm.name)*"} | ForEach-Object {
             $htmlname = '<a href="{0}/{1}/configurations/{2}">{3}</a>' -f $url,  $_.value.attributes.'organization-id',  $_.value.id, $vm.name
         }
     }
-    
+
 
     $VMs[$vm.name] = [PSCustomObject]@{
         name = $vm.name
@@ -273,17 +280,24 @@ $guestNICsIPsHTML = '<div>
                 <td>Swtich name</td>
                 <td>IPv4</td>
                 <td>IPv6</td>
+                <td>MAC address</td>
             </tr>
             {0}
         </tbody>
     </table>
 </div>' -f ((Get-VMNetworkAdapter * | Sort 'VMName').foreach{
+    $macAddr = $_.MacAddress
+    for($i=2; $i -lt $macAddr.Length; $i=$i+3) {
+        $macAddr = $macAddr.Insert($i,':')
+    }
+
     '<tr>
         <td>{0}</td>
         <td>{1}</td>
         <td>{2}</td>
         <td>{3}</td>
-    </tr>' -f $VMs[$_.VMName].htmlname, $_.switchname, $_.ipaddresses[0], $_.ipaddresses[1]} | Out-String)
+        <td>{4}</td>
+    </tr>' -f $VMs[$_.VMName].htmlname, $_.switchname, $_.ipaddresses[0], $_.ipaddresses[1], $macAddr } | Out-String)
 Write-Verbose "VM NICs done. [7/7]"
 
 
