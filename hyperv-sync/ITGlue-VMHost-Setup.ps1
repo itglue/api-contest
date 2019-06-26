@@ -14,10 +14,11 @@ try {
 }
 
 $flexible_asset_id = Read-Host "Enter flexible asset id (unique ID for asset to update)"
+$subdomain = Read-Host "Enter the subdomain of your IT Glue domain (without eu if present)"
 
 # Create scheduled task
 # Action
-$action = New-ScheduledTaskAction -Execute 'Powershell.exe' -Argument ('-ExecutionPolicy Bypass -NoProfile -WindowStyle Hidden "{0}\ITGlue-VMHost-FeedFlexibleAssetHyperV.ps1 -flexible_asset_id {1}"' -f $PSScriptRoot, $flexible_asset_id)
+$action = New-ScheduledTaskAction -Execute 'Powershell.exe' -Argument ('-ExecutionPolicy Bypass -NoProfile -WindowStyle Hidden "{0}\ITGlue-VMHost-FeedFlexibleAssetHyperV.ps1 -flexible_asset_id {1} -subdomain {2}"' -f $PSScriptRoot, $flexible_asset_id, $subdomain)
 # Trigger
 $trigger = New-ScheduledTaskTrigger -Daily -At (Get-Date)
 # Settings
