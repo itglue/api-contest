@@ -1,5 +1,5 @@
 1. Install the PowerShell wrapper for ITGlue's API on each Hyper-V server to sync. https://github.com/itglue/powershellwrapper
-2. Run `ITGlue-VMHost-CreateFlexibleAsset.ps1` to create the flexible asset needed and add it to the side bar ("_VM Host_").
+2. Run `ITGlue-VMHost-CreateFlexibleAsset.ps1` once to create the flexible asset needed and add it to the side bar ("_VM Host_").
 3. Create a new _VM Host_ asset for each server you want to sync. Take note of individual IDs.  
 3a. subdomain.itglue.com/1234568/assets/records/**1153985665234565**  
 3b. You only need to give it a name and tag a related a configuration in IT Glue.
