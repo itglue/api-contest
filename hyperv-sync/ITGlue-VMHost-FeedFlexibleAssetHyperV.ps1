@@ -77,7 +77,7 @@ $configurations = @{}
 $MACs = @{}
 $page_number = 1
 do{
-    Write-Verbose "Calling the IT Glue api (page $page_number)..."
+    Write-Verbose "Calling the IT Glue api for configurations (page $page_number, page size 1000)..."
     $api_call = Get-ITGlueConfigurations -organization_id $organization_id -page_size 1000 -page_number ($page_number++)
     foreach($_ in $api_call.data) {
         $configurations[$_.attributes.name] = $_
@@ -89,7 +89,7 @@ do{
 Write-Verbose "Done."
 
 # All VMs on the host (with some data)
-Write-Verbose "Creating hashtable with HTML name and rest of data..."
+Write-Verbose "Trying to match VMs against IT Glue configurations and building VM data object..."
 $VMs = @{}
 foreach($vm in Get-VM) {
     $htmlname = $vm.name
@@ -98,17 +98,21 @@ foreach($vm in Get-VM) {
     if($configurations[$vm.Name]) {
         $htmlname = '<a href="{0}/{1}/configurations/{2}">{3}</a>' -f $url,  $configurations[$vm.Name].attributes.'organization-id',  $configurations[$vm.Name].id, $vm.name
         $conf_id = $configurations[$vm.Name].id
+        Write-Verbose "Matched $($vm.Name) on name to $($configurations[$vm.Name].id)."
     } elseif($MACs[($vm.Name | Get-VMNetworkAdapter).MacAddress]) {
         $config = $MACs[($vm.Name | Get-VMNetworkAdapter).MacAddress]
         $conf_id = $config.id
         $htmlname = '<a href="{0}/{1}/configurations/{2}">{3}</a>' -f $url,  $config.attributes.'organization-id',  $config.id, $config.attributes.name
+        Write-Verbose "Matched $($vm.Name) on MAC address to $($config.id)."
     } else {
         $configurations.GetEnumerator() | Where {$_.Name -like "*$($vm.name)*"} | ForEach-Object {
             $htmlname = '<a href="{0}/{1}/configurations/{2}">{3}</a>' -f $url,  $_.value.attributes.'organization-id',  $_.value.id, $vm.name
             $conf_id = $_.value.id
+            Write-Verbose "Matched $($vm.Name) on wildcard to $($_.value.id)."
         }
     }
 
+    Write-Verbose "name = $($vm.name), vm = $($vm), conf_id = $($conf_id), htmlname = $($htmlname)"
 
     $VMs[$vm.name] = [PSCustomObject]@{
         name = $vm.name
@@ -117,7 +121,7 @@ foreach($vm in Get-VM) {
         conf_id = $conf_id
     }
 }
-Write-Verbose "Done."
+Write-Verbose "[1/9] VM data object done."
 
 # Hyper-V host's disk information / "Disk information"
 Write-Verbose "Getting host's disk data..."
@@ -140,7 +144,7 @@ $diskDataHTML = '<div>
         <td>{2}</td>
         <td>{3}</td>
     </tr>' -f $_.Root, [math]::round(($_.free+$_.used)/1GB), [math]::round($_.used/1GB), [math]::round($_.free/1GB)} | Out-String)
-Write-Verbose "Host's disk data done. [1/8]"
+Write-Verbose "[2/9] Host's disk data done."
 
 # Virtual swtiches / "Virtual switches"
 Write-Verbose "Getting virtual swtiches..."
@@ -161,7 +165,7 @@ $virtualSwitchsHTML = '<div>
         <td>{1}</td>
         <td>{2}</td>
     </tr>' -f $_.Name, $_.SwitchType, $_.NetAdapterInterfaceDescription} | Out-String)
-Write-Verbose "Virtual swtiches done. [2/8]"
+Write-Verbose "[3/9] Virtual swtiches done."
 
 # General information about virtual machines / "VM guest names and information"
 Write-Verbose "Getting general guest information..."
@@ -189,7 +193,7 @@ $guestInformationHTML = '<div>
         <td>{3}</td>
         <td>{4}</td>
     </tr>' -f $_.value.htmlname, $_.value.vm.AutomaticStartAction, [Math]::Round($_.value.vm.MemoryStartup/1GB), $_.value.vm.ProcessorCount, $diskSize} | Out-String)
-Write-Verbose "General guest information done. [3/8]"
+Write-Verbose "[4/9] General guest information done."
 
 # Virutal machines' disk file locations / "VM guest virtual disk paths"
 Write-Verbose "Getting VM machine paths..."
@@ -208,7 +212,7 @@ $virtualMachinePathsHTML = '<div>
         <td>{0}</td>
         <td>{1}</td>
     </tr>' -f $_.value.htmlname, ((Get-VHD -id $_.value.vm.id).path | Out-String).Replace([Environment]::NewLine, '<br>').TrimEnd('<br>')} | Out-String)
-Write-Verbose "VM machine paths done. [4/8]"
+Write-Verbose "[5/9] VM machine paths done."
 
 # Snapshot data / "VM guests snapshot information"
 Write-Verbose "Getting snapshot data..."
@@ -233,7 +237,7 @@ $vmSnapshotHTML = '<div>
         <td>{3}</td>
         <td>{4}</td>
     </tr>' -f $VMs[$_.VMName].htmlname, $_.Name, $_.SnapshotType, $_.CreationTime, $_.ParentSnapshotName} | Out-String)
-Write-Verbose "Snapshot data done. [5/8]"
+Write-Verbose "[6/9] Snapshot data done."
 
 # Virutal machines' bios settings / "VM guests BIOS settings"
 Write-Verbose "Getting VM BIOS settings..."
@@ -273,7 +277,7 @@ $vmBIOSSettingsHTML = '<div>
         </tbody>
     </table>
 </div>' -f ($vmBiosSettingsTableData | Out-String)
-Write-Verbose "VM BIOS settings done. [6/8]"
+Write-Verbose "[7/9] VM BIOS settings done."
 
 # Guest NICs and IPs
 Write-Verbose "Getting VM NICs..."
@@ -298,7 +302,7 @@ $guestNICsIPsHTML = '<div>
         <td>{3}</td>
         <td>{4}</td>
     </tr>' -f $VMs[$_.VMName].htmlname, $_.switchname, $_.ipaddresses[0], $_.ipaddresses[1], $($_.MacAddress -replace '(..(?!$))','$1:') } | Out-String)
-Write-Verbose "VM NICs done. [7/8]"
+Write-Verbose "[8/9] VM NICs done."
 
 
 Write-Verbose "Building final data structure..."
@@ -333,7 +337,7 @@ $asset_data = @{
         }
     }
 }
-Write-Verbose "Finished building the final structure. [8/8]"
+Write-Verbose "[9/9] Finished building the final structure."
 
 
 Write-Verbose "Comparing data.."
@@ -400,7 +404,7 @@ if($update) {
             @{
                 type= 'related_items'
                 attributes = @{
-                    destination_id = $_.value.conf_id 
+                    destination_id = $_.value.conf_id
                     destination_type = 'Configuration'
                 }
             }
@@ -412,7 +416,9 @@ if($update) {
     Write-Verbose "Done."
 
     if(Test-Path $PSScriptRoot\hyperv-related-items.txt) {
-        Write-Verbose "Creating a list of old related items (because there it no index/show endpoint to compare data against...)."
+        Write-Verbose "$("$PSScriptRoot\hyperv-related-items.txt") found, importing last response."
+
+        Write-Verbose "Creating a list of old related items from file..."
         $old_related_items = Get-Content $PSScriptRoot\hyperv-related-items.txt | ConvertFrom-Json
         Write-Verbose "Done."
 
@@ -435,7 +441,7 @@ if($update) {
             }
         }
 
-        Write-Verbose "Done."
+        Write-Verbose "Done comparing related items."
 
         if($related_items_remove) {
             Write-Verbose "Removing the old related items..."
@@ -452,6 +458,7 @@ if($update) {
                 $ITGlue_Headers.Add('x-api-key', (New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList 'N/A', $ITGlue_API_Key).GetNetworkCredential().Password)
                 $response['removed_related_items'] = Invoke-RestMethod -method 'DELETE' -uri ($ITGlue_Base_URI + $resource_uri_related_items_remove) -headers $ITGlue_Headers `
                     -body $body -ErrorAction Stop
+                Write-Verbose "Old realted items removed."
             } catch {
                 Write-Error $_
             } finally {
@@ -460,6 +467,7 @@ if($update) {
         }
     }
 
+    Write-Verbose "Begin uploading related items (because there is not endpoint to check current ones)..."
 
     $body = @{}
 
@@ -473,6 +481,7 @@ if($update) {
         $ITGlue_Headers.Add('x-api-key', (New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList 'N/A', $ITGlue_API_Key).GetNetworkCredential().Password)
         $response['related_items'] = Invoke-RestMethod -method 'POST' -uri ($ITGlue_Base_URI + $resource_uri_related_items) -headers $ITGlue_Headers `
             -body $body -ErrorAction Stop
+        Write-Verbose "New related items updated."
     } catch {
         Write-Error $_
     } finally {
@@ -480,7 +489,7 @@ if($update) {
     }
 
      $response['related_items'].data | ConvertTo-Json -Depth 100 | Out-File $PSScriptRoot\hyperv-related-items.txt -Force
-    
+
     return $response
 
 } else {
