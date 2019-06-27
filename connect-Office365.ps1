@@ -34,6 +34,10 @@ function connect-Office365{
 	foreach ($id in $org_ids){
 		$data = (Get-ITGlueOrganizations -filter_id $id).Data.attributes
 		
+		if ($data.'organization-status-id' -ne 10022){
+			continue;
+		}
+		
 		$orgs += [pscustomobject]@{'name' = $data.name; 'sn' = $data.'short-name'; 'id' = $id}
 	}
 	
