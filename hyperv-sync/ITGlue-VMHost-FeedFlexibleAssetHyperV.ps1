@@ -93,15 +93,18 @@ Write-Verbose "Creating hashtable with HTML name and rest of data..."
 $VMs = @{}
 foreach($vm in Get-VM) {
     $htmlname = $vm.name
+    $conf_id = -1
 
     if($configurations[$vm.Name]) {
         $htmlname = '<a href="{0}/{1}/configurations/{2}">{3}</a>' -f $url,  $configurations[$vm.Name].attributes.'organization-id',  $configurations[$vm.Name].id, $vm.name
+        $conf_id = $configurations[$vm.Name].id
     } elseif($MACs[($vm.Name | Get-VMNetworkAdapter).MacAddress]) {
         $config = $MACs[($vm.Name | Get-VMNetworkAdapter).MacAddress]
         $htmlname = '<a href="{0}/{1}/configurations/{2}">{3}</a>' -f $url,  $config.attributes.'organization-id',  $config.id, $config.attributes.name
     } else {
         $configurations.GetEnumerator() | Where {$_.Name -like "*$($vm.name)*"} | ForEach-Object {
             $htmlname = '<a href="{0}/{1}/configurations/{2}">{3}</a>' -f $url,  $_.value.attributes.'organization-id',  $_.value.id, $vm.name
+            $conf_id = $_.value.id
         }
     }
 
@@ -110,6 +113,7 @@ foreach($vm in Get-VM) {
         name = $vm.name
         vm = $vm
         htmlname = $htmlname
+        conf_id = $conf_id
     }
 }
 Write-Verbose "Done."
@@ -135,7 +139,7 @@ $diskDataHTML = '<div>
         <td>{2}</td>
         <td>{3}</td>
     </tr>' -f $_.Root, [math]::round(($_.free+$_.used)/1GB), [math]::round($_.used/1GB), [math]::round($_.free/1GB)} | Out-String)
-Write-Verbose "Host's disk data done. [1/7]"
+Write-Verbose "Host's disk data done. [1/8]"
 
 # Virtual swtiches / "Virtual switches"
 Write-Verbose "Getting virtual swtiches..."
@@ -156,7 +160,7 @@ $virtualSwitchsHTML = '<div>
         <td>{1}</td>
         <td>{2}</td>
     </tr>' -f $_.Name, $_.SwitchType, $_.NetAdapterInterfaceDescription} | Out-String)
-Write-Verbose "Virtual swtiches done. [2/7]"
+Write-Verbose "Virtual swtiches done. [2/8]"
 
 # General information about virtual machines / "VM guest names and information"
 Write-Verbose "Getting general guest information..."
@@ -184,7 +188,7 @@ $guestInformationHTML = '<div>
         <td>{3}</td>
         <td>{4}</td>
     </tr>' -f $_.value.htmlname, $_.value.vm.AutomaticStartAction, [Math]::Round($_.value.vm.MemoryStartup/1GB), $_.value.vm.ProcessorCount, $diskSize} | Out-String)
-Write-Verbose "General guest information done. [3/7]"
+Write-Verbose "General guest information done. [3/8]"
 
 # Virutal machines' disk file locations / "VM guest virtual disk paths"
 Write-Verbose "Getting VM machine paths..."
@@ -203,7 +207,7 @@ $virtualMachinePathsHTML = '<div>
         <td>{0}</td>
         <td>{1}</td>
     </tr>' -f $_.value.htmlname, ((Get-VHD -id $_.value.vm.id).path | Out-String).Replace([Environment]::NewLine, '<br>').TrimEnd('<br>')} | Out-String)
-Write-Verbose "VM machine paths done. [4/7]"
+Write-Verbose "VM machine paths done. [4/8]"
 
 # Snapshot data / "VM guests snapshot information"
 Write-Verbose "Getting snapshot data..."
@@ -228,7 +232,7 @@ $vmSnapshotHTML = '<div>
         <td>{3}</td>
         <td>{4}</td>
     </tr>' -f $VMs[$_.VMName].htmlname, $_.Name, $_.SnapshotType, $_.CreationTime, $_.ParentSnapshotName} | Out-String)
-Write-Verbose "Snapshot data done. [5/7]"
+Write-Verbose "Snapshot data done. [5/8]"
 
 # Virutal machines' bios settings / "VM guests BIOS settings"
 Write-Verbose "Getting VM BIOS settings..."
@@ -268,7 +272,7 @@ $vmBIOSSettingsHTML = '<div>
         </tbody>
     </table>
 </div>' -f ($vmBiosSettingsTableData | Out-String)
-Write-Verbose "VM BIOS settings done. [6/7]"
+Write-Verbose "VM BIOS settings done. [6/8]"
 
 # Guest NICs and IPs
 Write-Verbose "Getting VM NICs..."
@@ -293,10 +297,11 @@ $guestNICsIPsHTML = '<div>
         <td>{3}</td>
         <td>{4}</td>
     </tr>' -f $VMs[$_.VMName].htmlname, $_.switchname, $_.ipaddresses[0], $_.ipaddresses[1], $($_.MacAddress -replace '(..(?!$))','$1:') } | Out-String)
-Write-Verbose "VM NICs done. [7/7]"
+Write-Verbose "VM NICs done. [7/8]"
 
 
-$data = @{
+Write-Verbose "Building final data structure..."
+$asset_data = @{
     type = 'flexible-assets'
     attributes = @{
         traits = @{
@@ -327,7 +332,7 @@ $data = @{
         }
     }
 }
-Write-Verbose "Finished build hash table."
+Write-Verbose "Finished building the final structure. [8/8]"
 
 
 Write-Verbose "Comparing data.."
@@ -336,54 +341,147 @@ $update = $false
 
 if($flexibleAsset.data.attributes.traits.'force-manual-sync-now' -eq 'Yes') {
     $update = $true
-} elseif($data.attributes.traits.cpu -ne $flexibleAsset.data.attributes.traits.cpu) {
+} elseif($asset_data.attributes.traits.cpu -ne $flexibleAsset.data.attributes.traits.cpu) {
     Write-Verbose "Change detected. Will update asset."
     $update = $true
-} elseif($data.attributes.traits.'ram-gb' -ne $flexibleAsset.data.attributes.traits.'ram-gb') {
+} elseif($asset_data.attributes.traits.'ram-gb' -ne $flexibleAsset.data.attributes.traits.'ram-gb') {
     Write-Verbose "Change detected. Will update asset."
     $update = $true
-} elseif(($data.attributes.traits.'disk-information'.replace("`n","").replace("`r","")) -ne ($flexibleAsset.data.attributes.traits.'disk-information'.replace("`n","").replace("`r",""))) {
+} elseif(($asset_data.attributes.traits.'disk-information'.replace("`n","").replace("`r","")) -ne ($flexibleAsset.data.attributes.traits.'disk-information'.replace("`n","").replace("`r",""))) {
     Write-Verbose "Change detected. Will update asset."
     $update = $true
-} elseif(($data.attributes.traits.'virtual-switches'.replace("`n","").replace("`r","")) -ne ($flexibleAsset.data.attributes.traits.'virtual-switches'.replace("`n","").replace("`r",""))) {
+} elseif(($asset_data.attributes.traits.'virtual-switches'.replace("`n","").replace("`r","")) -ne ($flexibleAsset.data.attributes.traits.'virtual-switches'.replace("`n","").replace("`r",""))) {
     Write-Verbose "Change detected. Will update asset."
     $update = $true
-} elseif($data.attributes.traits.'current-number-of-vm-guests-on-this-vm-host' -ne $flexibleAsset.data.attributes.traits.'current-number-of-vm-guests-on-this-vm-host') {
+} elseif($asset_data.attributes.traits.'current-number-of-vm-guests-on-this-vm-host' -ne $flexibleAsset.data.attributes.traits.'current-number-of-vm-guests-on-this-vm-host') {
     Write-Verbose "Change detected. Will update asset."
     $update = $true
-} elseif(($data.attributes.traits.'vm-guest-names-and-information'.replace("`n","").replace("`r","")) -ne ($flexibleAsset.data.attributes.traits.'vm-guest-names-and-information'.replace("`n","").replace("`r",""))) {
+} elseif(($asset_data.attributes.traits.'vm-guest-names-and-information'.replace("`n","").replace("`r","")) -ne ($flexibleAsset.data.attributes.traits.'vm-guest-names-and-information'.replace("`n","").replace("`r",""))) {
     Write-Verbose "Change detected. Will update asset."
     $update = $true
-} elseif(($data.attributes.traits.'vm-guest-virtual-disk-paths'.replace("`n","").replace("`r","")) -ne ($flexibleAsset.data.attributes.traits.'vm-guest-virtual-disk-paths'.replace("`n","").replace("`r",""))) {
+} elseif(($asset_data.attributes.traits.'vm-guest-virtual-disk-paths'.replace("`n","").replace("`r","")) -ne ($flexibleAsset.data.attributes.traits.'vm-guest-virtual-disk-paths'.replace("`n","").replace("`r",""))) {
     Write-Verbose "Change detected. Will update asset."
     $update = $true
-} elseif(($data.attributes.traits.'vm-guests-snapshot-information'.replace("`n","").replace("`r","")) -ne ($flexibleAsset.data.attributes.traits.'vm-guests-snapshot-information'.replace("`n","").replace("`r",""))) {
+} elseif(($asset_data.attributes.traits.'vm-guests-snapshot-information'.replace("`n","").replace("`r","")) -ne ($flexibleAsset.data.attributes.traits.'vm-guests-snapshot-information'.replace("`n","").replace("`r",""))) {
     Write-Verbose "Change detected. Will update asset."
     $update = $true
-} elseif(($data.attributes.traits.'vm-guests-bios-settings'.replace("`n","").replace("`r","")) -ne ($flexibleAsset.data.attributes.traits.'vm-guests-bios-settings'.replace("`n","").replace("`r",""))) {
+} elseif(($asset_data.attributes.traits.'vm-guests-bios-settings'.replace("`n","").replace("`r","")) -ne ($flexibleAsset.data.attributes.traits.'vm-guests-bios-settings'.replace("`n","").replace("`r",""))) {
     Write-Verbose "Change detected. Will update asset."
     $update = $true
-} elseif(($data.attributes.traits.'assigned-virtual-switches-and-ip-information'.replace("`n","").replace("`r","")) -ne ($flexibleAsset.data.attributes.traits.'assigned-virtual-switches-and-ip-information'.replace("`n","").replace("`r",""))) {
+} elseif(($asset_data.attributes.traits.'assigned-virtual-switches-and-ip-information'.replace("`n","").replace("`r","")) -ne ($flexibleAsset.data.attributes.traits.'assigned-virtual-switches-and-ip-information'.replace("`n","").replace("`r",""))) {
     Write-Verbose "Change detected. Will update asset."
     $update = $true
 }
 
 if($update) {
     Write-Verbose "Begin updating asset.."
+    $response = @{}
 
-    $data["attributes"]["id"] = $flexible_asset_id
+    $asset_data["attributes"]["id"] = $flexible_asset_id
     Write-Verbose "Added id to hash table."
     # Visible name
-    $data["attributes"]["traits"]["vm-host-name"] = $flexibleAsset.data.attributes.traits.'vm-host-name'
+    $asset_data["attributes"]["traits"]["vm-host-name"] = $flexibleAsset.data.attributes.traits.'vm-host-name'
     Write-Verbose "Added VM host name to hash table."
     # Tagged asset (i.e the host)
-    $data["attributes"]["traits"]["vm-host-related-it-glue-configuration"] = $flexibleAsset.data.attributes.traits.'vm-host-related-it-glue-configuration'.Values.id
+    $asset_data["attributes"]["traits"]["vm-host-related-it-glue-configuration"] = $flexibleAsset.data.attributes.traits.'vm-host-related-it-glue-configuration'.Values.id
     Write-Verbose "Added VM host related IT Glue configuration to hash table."
 
     Write-Verbose "Uploading data for id $flexible_asset_id."
-    $resp =  Set-ITGlueFlexibleAssets -data $data
+    $response['asset'] = Set-ITGlueFlexibleAssets -data $asset_data
     Write-Verbose "Uploading data: done."
-    return $resp
+
+
+    Write-Verbose "Creating new related items (because there it no index/show endpoint to compare data against...)."
+    $new_related_items_hash = @{}
+    $new_related_items = New-Object System.Collections.ArrayList
+    $VMs.GetEnumerator() | Where {$_.value.conf_id -ne '-1'} | Foreach {
+        [void]$new_related_items.Add(
+            @{
+                type= 'related_items'
+                attributes = @{
+                    destination_id = $_.value.conf_id
+                    destination_type = 'Configuration'
+                }
+            }
+        )
+
+        $new_related_items_hash[$_.value.conf_id] = $_.value.conf_id
+    }
+
+    Write-Verbose "Done."
+
+    if(Test-Path $PSScriptRoot\hyperv-related-items.txt) {
+        Write-Verbose "Creating a list of old related items (because there it no index/show endpoint to compare data against...)."
+        $old_related_items = Get-Content $PSScriptRoot\hyperv-related-items.txt | ConvertFrom-Json
+        Write-Verbose "Done."
+
+
+        Write-Verbose "Comparing with related items..."
+        $related_items_remove = New-Object System.Collections.ArrayList
+
+        foreach($old_id in $old_related_items) {
+            if(-not $new_related_items_hash["$($old_id.attributes.'destination-id')"]) {
+                Write-Verbose "$($old_id.id) is no longer on the host and will be removed."
+
+                [void]$related_items_remove.Add(
+                    @{
+                        type = 'related_items'
+                        attributes = @{
+                            id = $old_id.id
+                        }
+                    }
+                )
+            }
+        }
+
+        Write-Verbose "Done."
+
+        if($related_items_remove) {
+            Write-Verbose "Removing the old related items..."
+
+            $body = @{}
+
+            $body += @{'data'= $related_items_remove}
+
+            $body = ConvertTo-Json -InputObject $body -Depth $ITGlue_JSON_Conversion_Depth
+
+            $resource_uri_related_items_remove = '/{0}/{1}/relationships/related_items' -f 'flexible_assets', $flexible_asset_id
+
+            try {
+                $ITGlue_Headers.Add('x-api-key', (New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList 'N/A', $ITGlue_API_Key).GetNetworkCredential().Password)
+                $response['removed_related_items'] = Invoke-RestMethod -method 'DELETE' -uri ($ITGlue_Base_URI + $resource_uri_related_items_remove) -headers $ITGlue_Headers `
+                    -body $body -ErrorAction Stop
+            } catch {
+                Write-Error $_
+            } finally {
+                [void] ($ITGlue_Headers.Remove('x-api-key')) # Quietly clean up scope so the API key doesn't persist
+            }
+        }
+    }
+
+
+    $body = @{}
+
+    $body += @{'data'= $new_related_items}
+
+    $body = ConvertTo-Json -InputObject $body -Depth $ITGlue_JSON_Conversion_Depth
+
+    $resource_uri_related_items = '/{0}/{1}/relationships/related_items' -f 'flexible_assets', $flexible_asset_id
+
+    try {
+        $ITGlue_Headers.Add('x-api-key', (New-Object -TypeName System.Management.Automation.PSCredential -ArgumentList 'N/A', $ITGlue_API_Key).GetNetworkCredential().Password)
+        $response['related_items'] = Invoke-RestMethod -method 'POST' -uri ($ITGlue_Base_URI + $resource_uri_related_items) -headers $ITGlue_Headers `
+            -body $body -ErrorAction Stop
+    } catch {
+        Write-Error $_
+    } finally {
+        [void] ($ITGlue_Headers.Remove('x-api-key')) # Quietly clean up scope so the API key doesn't persist
+    }
+
+     $response['related_items'].data | ConvertTo-Json -Depth 100 | Out-File $PSScriptRoot\hyperv-related-items.txt -Force
+
+    return $response
+
 } else {
     Write-Verbose "No change detected. Not updating."
 }
