@@ -1,0 +1,71 @@
+{
+  "format": 1,
+  "restore": {
+    "Z:\\IT1 DA\\Stuff2GlueContest\\Stuff2Glue\\Stuff2Glue.csproj": {}
+  },
+  "projects": {
+    "Z:\\IT1 DA\\Stuff2GlueContest\\Stuff2Glue\\Stuff2Glue.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "Z:\\IT1 DA\\Stuff2GlueContest\\Stuff2Glue\\Stuff2Glue.csproj",
+        "projectName": "Stuff2Glue",
+        "projectPath": "Z:\\IT1 DA\\Stuff2GlueContest\\Stuff2Glue\\Stuff2Glue.csproj",
+        "packagesPath": "C:\\Users\\anqel\\.nuget\\packages\\",
+        "outputPath": "Z:\\IT1 DA\\Stuff2GlueContest\\Stuff2Glue\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\anqel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.0": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.0": {
+          "dependencies": {
+            "Microsoft.NETCore.App": {
+              "target": "Package",
+              "version": "[2.0.0, )",
+              "autoReferenced": true
+            },
+            "ObjectsComparer": {
+              "target": "Package",
+              "version": "[1.1.0, )"
+            },
+            "RestSharp": {
+              "target": "Package",
+              "version": "[106.3.1, )"
+            },
+            "SSH.NET": {
+              "target": "Package",
+              "version": "[2016.1.0, )"
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}

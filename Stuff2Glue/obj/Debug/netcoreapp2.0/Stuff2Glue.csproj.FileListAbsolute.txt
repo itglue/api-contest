@@ -1,0 +1,88 @@
+C:\Users\Leslie\source\repos\Stuff2Glue\Stuff2Glue\bin\Debug\netcoreapp2.0\Stuff2Glue.deps.json
+C:\Users\Leslie\source\repos\Stuff2Glue\Stuff2Glue\bin\Debug\netcoreapp2.0\Stuff2Glue.runtimeconfig.json
+C:\Users\Leslie\source\repos\Stuff2Glue\Stuff2Glue\bin\Debug\netcoreapp2.0\Stuff2Glue.runtimeconfig.dev.json
+C:\Users\Leslie\source\repos\Stuff2Glue\Stuff2Glue\bin\Debug\netcoreapp2.0\Stuff2Glue.dll
+C:\Users\Leslie\source\repos\Stuff2Glue\Stuff2Glue\bin\Debug\netcoreapp2.0\Stuff2Glue.pdb
+C:\Users\Leslie\source\repos\Stuff2Glue\Stuff2Glue\obj\Debug\netcoreapp2.0\Stuff2Glue.csprojResolveAssemblyReference.cache
+C:\Users\Leslie\source\repos\Stuff2Glue\Stuff2Glue\obj\Debug\netcoreapp2.0\Stuff2Glue.csproj.CoreCompileInputs.cache
+C:\Users\Leslie\source\repos\Stuff2Glue\Stuff2Glue\obj\Debug\netcoreapp2.0\Stuff2Glue.AssemblyInfoInputs.cache
+C:\Users\Leslie\source\repos\Stuff2Glue\Stuff2Glue\obj\Debug\netcoreapp2.0\Stuff2Glue.AssemblyInfo.cs
+C:\Users\Leslie\source\repos\Stuff2Glue\Stuff2Glue\obj\Debug\netcoreapp2.0\Stuff2Glue.dll
+C:\Users\Leslie\source\repos\Stuff2Glue\Stuff2Glue\obj\Debug\netcoreapp2.0\Stuff2Glue.pdb
+D:\Data\Visual Studio\Stuff2Glue\Stuff2Glue\bin\Debug\netcoreapp2.0\Stuff2Glue.deps.json
+D:\Data\Visual Studio\Stuff2Glue\Stuff2Glue\bin\Debug\netcoreapp2.0\Stuff2Glue.runtimeconfig.json
+D:\Data\Visual Studio\Stuff2Glue\Stuff2Glue\bin\Debug\netcoreapp2.0\Stuff2Glue.runtimeconfig.dev.json
+D:\Data\Visual Studio\Stuff2Glue\Stuff2Glue\bin\Debug\netcoreapp2.0\Stuff2Glue.dll
+D:\Data\Visual Studio\Stuff2Glue\Stuff2Glue\bin\Debug\netcoreapp2.0\Stuff2Glue.pdb
+D:\Data\Visual Studio\Stuff2Glue\Stuff2Glue\obj\Debug\netcoreapp2.0\Stuff2Glue.csprojResolveAssemblyReference.cache
+D:\Data\Visual Studio\Stuff2Glue\Stuff2Glue\obj\Debug\netcoreapp2.0\Stuff2Glue.csproj.CoreCompileInputs.cache
+D:\Data\Visual Studio\Stuff2Glue\Stuff2Glue\obj\Debug\netcoreapp2.0\Stuff2Glue.AssemblyInfoInputs.cache
+D:\Data\Visual Studio\Stuff2Glue\Stuff2Glue\obj\Debug\netcoreapp2.0\Stuff2Glue.AssemblyInfo.cs
+D:\Data\Visual Studio\Stuff2Glue\Stuff2Glue\obj\Debug\netcoreapp2.0\Stuff2Glue.dll
+D:\Data\Visual Studio\Stuff2Glue\Stuff2Glue\obj\Debug\netcoreapp2.0\Stuff2Glue.pdb
+C:\Temp\Visual Studio\Stuff2Glue\Stuff2Glue\bin\Debug\netcoreapp2.0\Stuff2Glue.deps.json
+C:\Temp\Visual Studio\Stuff2Glue\Stuff2Glue\bin\Debug\netcoreapp2.0\Stuff2Glue.runtimeconfig.json
+C:\Temp\Visual Studio\Stuff2Glue\Stuff2Glue\bin\Debug\netcoreapp2.0\Stuff2Glue.runtimeconfig.dev.json
+C:\Temp\Visual Studio\Stuff2Glue\Stuff2Glue\bin\Debug\netcoreapp2.0\Stuff2Glue.dll
+C:\Temp\Visual Studio\Stuff2Glue\Stuff2Glue\bin\Debug\netcoreapp2.0\Stuff2Glue.pdb
+C:\Temp\Visual Studio\Stuff2Glue\Stuff2Glue\obj\Debug\netcoreapp2.0\Stuff2Glue.csprojResolveAssemblyReference.cache
+C:\Temp\Visual Studio\Stuff2Glue\Stuff2Glue\obj\Debug\netcoreapp2.0\Stuff2Glue.csproj.CoreCompileInputs.cache
+C:\Temp\Visual Studio\Stuff2Glue\Stuff2Glue\obj\Debug\netcoreapp2.0\Stuff2Glue.AssemblyInfoInputs.cache
+C:\Temp\Visual Studio\Stuff2Glue\Stuff2Glue\obj\Debug\netcoreapp2.0\Stuff2Glue.AssemblyInfo.cs
+C:\Temp\Visual Studio\Stuff2Glue\Stuff2Glue\obj\Debug\netcoreapp2.0\Stuff2Glue.dll
+C:\Temp\Visual Studio\Stuff2Glue\Stuff2Glue\obj\Debug\netcoreapp2.0\Stuff2Glue.pdb
+C:\Temp\Visual Studio\Stuff2Glue\Stuff2Glue\bin\Debug\netcoreapp2.0\ObjectsComparer.dll
+C:\Temp\Visual Studio\Stuff2Glue\Stuff2Glue\bin\Debug\netcoreapp2.0\RestSharp.dll
+C:\Temp\Visual Studio\Stuff2Glue\Stuff2Glue\bin\Debug\netcoreapp2.0\Renci.SshNet.dll
+C:\Temp\Visual Studio\Stuff2Glue\Stuff2Glue\bin\Debug\netcoreapp2.0\SshNet.Security.Cryptography.dll
+C:\Temp\Visual Studio\Stuff2Glue\Stuff2Glue\bin\Debug\netcoreapp2.0\System.Xml.XPath.XmlDocument.dll
+X:\IT1 DA\Stuff2Glue\Stuff2Glue\bin\Debug\netcoreapp2.0\Stuff2Glue.deps.json
+X:\IT1 DA\Stuff2Glue\Stuff2Glue\bin\Debug\netcoreapp2.0\Stuff2Glue.runtimeconfig.json
+X:\IT1 DA\Stuff2Glue\Stuff2Glue\bin\Debug\netcoreapp2.0\Stuff2Glue.runtimeconfig.dev.json
+X:\IT1 DA\Stuff2Glue\Stuff2Glue\bin\Debug\netcoreapp2.0\Stuff2Glue.dll
+X:\IT1 DA\Stuff2Glue\Stuff2Glue\bin\Debug\netcoreapp2.0\Stuff2Glue.pdb
+X:\IT1 DA\Stuff2Glue\Stuff2Glue\bin\Debug\netcoreapp2.0\ObjectsComparer.dll
+X:\IT1 DA\Stuff2Glue\Stuff2Glue\bin\Debug\netcoreapp2.0\RestSharp.dll
+X:\IT1 DA\Stuff2Glue\Stuff2Glue\bin\Debug\netcoreapp2.0\Renci.SshNet.dll
+X:\IT1 DA\Stuff2Glue\Stuff2Glue\bin\Debug\netcoreapp2.0\SshNet.Security.Cryptography.dll
+X:\IT1 DA\Stuff2Glue\Stuff2Glue\bin\Debug\netcoreapp2.0\System.Xml.XPath.XmlDocument.dll
+X:\IT1 DA\Stuff2Glue\Stuff2Glue\obj\Debug\netcoreapp2.0\Stuff2Glue.csprojResolveAssemblyReference.cache
+X:\IT1 DA\Stuff2Glue\Stuff2Glue\obj\Debug\netcoreapp2.0\Stuff2Glue.csproj.CoreCompileInputs.cache
+X:\IT1 DA\Stuff2Glue\Stuff2Glue\obj\Debug\netcoreapp2.0\Stuff2Glue.AssemblyInfoInputs.cache
+X:\IT1 DA\Stuff2Glue\Stuff2Glue\obj\Debug\netcoreapp2.0\Stuff2Glue.AssemblyInfo.cs
+X:\IT1 DA\Stuff2Glue\Stuff2Glue\obj\Debug\netcoreapp2.0\Stuff2Glue.dll
+X:\IT1 DA\Stuff2Glue\Stuff2Glue\obj\Debug\netcoreapp2.0\Stuff2Glue.pdb
+Z:\IT1 DA\Stuff2Glue\Stuff2Glue\bin\Debug\netcoreapp2.0\Stuff2Glue.deps.json
+Z:\IT1 DA\Stuff2Glue\Stuff2Glue\bin\Debug\netcoreapp2.0\Stuff2Glue.runtimeconfig.json
+Z:\IT1 DA\Stuff2Glue\Stuff2Glue\bin\Debug\netcoreapp2.0\Stuff2Glue.runtimeconfig.dev.json
+Z:\IT1 DA\Stuff2Glue\Stuff2Glue\bin\Debug\netcoreapp2.0\Stuff2Glue.dll
+Z:\IT1 DA\Stuff2Glue\Stuff2Glue\bin\Debug\netcoreapp2.0\Stuff2Glue.pdb
+Z:\IT1 DA\Stuff2Glue\Stuff2Glue\bin\Debug\netcoreapp2.0\ObjectsComparer.dll
+Z:\IT1 DA\Stuff2Glue\Stuff2Glue\bin\Debug\netcoreapp2.0\RestSharp.dll
+Z:\IT1 DA\Stuff2Glue\Stuff2Glue\bin\Debug\netcoreapp2.0\Renci.SshNet.dll
+Z:\IT1 DA\Stuff2Glue\Stuff2Glue\bin\Debug\netcoreapp2.0\SshNet.Security.Cryptography.dll
+Z:\IT1 DA\Stuff2Glue\Stuff2Glue\bin\Debug\netcoreapp2.0\System.Xml.XPath.XmlDocument.dll
+Z:\IT1 DA\Stuff2Glue\Stuff2Glue\obj\Debug\netcoreapp2.0\Stuff2Glue.csprojAssemblyReference.cache
+Z:\IT1 DA\Stuff2Glue\Stuff2Glue\obj\Debug\netcoreapp2.0\Stuff2Glue.csproj.CoreCompileInputs.cache
+Z:\IT1 DA\Stuff2Glue\Stuff2Glue\obj\Debug\netcoreapp2.0\Stuff2Glue.AssemblyInfoInputs.cache
+Z:\IT1 DA\Stuff2Glue\Stuff2Glue\obj\Debug\netcoreapp2.0\Stuff2Glue.AssemblyInfo.cs
+Z:\IT1 DA\Stuff2Glue\Stuff2Glue\obj\Debug\netcoreapp2.0\Stuff2Glue.csproj.CopyComplete
+Z:\IT1 DA\Stuff2Glue\Stuff2Glue\obj\Debug\netcoreapp2.0\Stuff2Glue.dll
+Z:\IT1 DA\Stuff2Glue\Stuff2Glue\obj\Debug\netcoreapp2.0\Stuff2Glue.pdb
+Z:\IT1 DA\Stuff2GlueContest\Stuff2Glue\bin\Debug\netcoreapp2.0\Stuff2Glue.deps.json
+Z:\IT1 DA\Stuff2GlueContest\Stuff2Glue\bin\Debug\netcoreapp2.0\Stuff2Glue.runtimeconfig.json
+Z:\IT1 DA\Stuff2GlueContest\Stuff2Glue\bin\Debug\netcoreapp2.0\Stuff2Glue.runtimeconfig.dev.json
+Z:\IT1 DA\Stuff2GlueContest\Stuff2Glue\bin\Debug\netcoreapp2.0\Stuff2Glue.dll
+Z:\IT1 DA\Stuff2GlueContest\Stuff2Glue\bin\Debug\netcoreapp2.0\Stuff2Glue.pdb
+Z:\IT1 DA\Stuff2GlueContest\Stuff2Glue\bin\Debug\netcoreapp2.0\ObjectsComparer.dll
+Z:\IT1 DA\Stuff2GlueContest\Stuff2Glue\bin\Debug\netcoreapp2.0\RestSharp.dll
+Z:\IT1 DA\Stuff2GlueContest\Stuff2Glue\bin\Debug\netcoreapp2.0\Renci.SshNet.dll
+Z:\IT1 DA\Stuff2GlueContest\Stuff2Glue\bin\Debug\netcoreapp2.0\SshNet.Security.Cryptography.dll
+Z:\IT1 DA\Stuff2GlueContest\Stuff2Glue\bin\Debug\netcoreapp2.0\System.Xml.XPath.XmlDocument.dll
+Z:\IT1 DA\Stuff2GlueContest\Stuff2Glue\obj\Debug\netcoreapp2.0\Stuff2Glue.csprojAssemblyReference.cache
+Z:\IT1 DA\Stuff2GlueContest\Stuff2Glue\obj\Debug\netcoreapp2.0\Stuff2Glue.csproj.CoreCompileInputs.cache
+Z:\IT1 DA\Stuff2GlueContest\Stuff2Glue\obj\Debug\netcoreapp2.0\Stuff2Glue.AssemblyInfoInputs.cache
+Z:\IT1 DA\Stuff2GlueContest\Stuff2Glue\obj\Debug\netcoreapp2.0\Stuff2Glue.AssemblyInfo.cs
+Z:\IT1 DA\Stuff2GlueContest\Stuff2Glue\obj\Debug\netcoreapp2.0\Stuff2Glue.csproj.CopyComplete
+Z:\IT1 DA\Stuff2GlueContest\Stuff2Glue\obj\Debug\netcoreapp2.0\Stuff2Glue.dll
+Z:\IT1 DA\Stuff2GlueContest\Stuff2Glue\obj\Debug\netcoreapp2.0\Stuff2Glue.pdb

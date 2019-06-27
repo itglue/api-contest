@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <ApplicationIcon />
+    <StartupObject />
+<CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ObjectsComparer" Version="1.1.0" />
+    <PackageReference Include="RestSharp" Version="106.3.1" />
+    <PackageReference Include="SSH.NET" Version="2016.1.0" />
+  </ItemGroup>
+
+</Project>
