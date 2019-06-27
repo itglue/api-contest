@@ -30,10 +30,11 @@ function New-ITGlueWebRequest {
             'Content-Type' = 'application/vnd.api+json'
         }
     }
-    if ($Body) {$RequestParams.Body = $Body}
+    if ($Body) { $RequestParams.Body = $Body }
 
     try {
         $Request = Invoke-RestMethod @RequestParams
+        # RateLimit: 10k/day
 
         if ($PageNumber -lt $Request.meta.'total-pages') {
             $PageNumber++
@@ -45,6 +46,10 @@ function New-ITGlueWebRequest {
     }
     catch {
         Write-Warning "Something went wrong with ITGlue request:`n$_"
+        if ($CFITGLog) {
+            "[ITG Request: $Endpoint]$(Get-Date -Format G):  $_" | Out-File $CFITGLog -Append
+        }
+
         $APIKey = $null
         $RequestParams = $null
     }

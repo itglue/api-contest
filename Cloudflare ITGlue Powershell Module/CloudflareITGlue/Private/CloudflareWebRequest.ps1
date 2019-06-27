@@ -31,13 +31,12 @@ function New-CloudflareWebRequest {
             'Content-Type' = 'application/json'
         }
     }
-    if ($Body) {$RequestParams.Body = $Body}
+    if ($Body) { $RequestParams.Body = $Body }
     
     try {
-        Start-Sleep -Milliseconds 275
         $Request = Invoke-RestMethod @RequestParams
-        Start-Sleep -Milliseconds 275
-        #RateLimit = 1200 requests/5 min but still getting gateway timeouts @ 300ms+
+        Start-Sleep -Milliseconds 325
+        # RateLimit: 1200/5 min
                 
         if ($PageNumber -lt $Request.result_info.total_pages) {
             $PageNumber++
@@ -49,6 +48,10 @@ function New-CloudflareWebRequest {
     }
     catch {
         Write-Warning "Something went wrong with Cloudflare request:`n$_"
+        if ($CFITGLog) {
+            "[CF Request: $Endpoint]$(Get-Date -Format G):  $_" | Out-File $CFITGLog -Append
+        }
+        
         $APIKey = $null
         $RequestParams = $null
     }
