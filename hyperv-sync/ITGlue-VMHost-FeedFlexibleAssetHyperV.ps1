@@ -100,6 +100,7 @@ foreach($vm in Get-VM) {
         $conf_id = $configurations[$vm.Name].id
     } elseif($MACs[($vm.Name | Get-VMNetworkAdapter).MacAddress]) {
         $config = $MACs[($vm.Name | Get-VMNetworkAdapter).MacAddress]
+        $conf_id = $config.id
         $htmlname = '<a href="{0}/{1}/configurations/{2}">{3}</a>' -f $url,  $config.attributes.'organization-id',  $config.id, $config.attributes.name
     } else {
         $configurations.GetEnumerator() | Where {$_.Name -like "*$($vm.name)*"} | ForEach-Object {
@@ -399,7 +400,7 @@ if($update) {
             @{
                 type= 'related_items'
                 attributes = @{
-                    destination_id = $_.value.conf_id
+                    destination_id = $_.value.conf_id 
                     destination_type = 'Configuration'
                 }
             }
@@ -479,7 +480,7 @@ if($update) {
     }
 
      $response['related_items'].data | ConvertTo-Json -Depth 100 | Out-File $PSScriptRoot\hyperv-related-items.txt -Force
-
+    
     return $response
 
 } else {
