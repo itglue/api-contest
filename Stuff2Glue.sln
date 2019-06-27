@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2005
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Stuff2Glue", "Stuff2Glue\Stuff2Glue.csproj", "{B9C204E7-49BD-465A-BB12-0FA42A3734BA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B9C204E7-49BD-465A-BB12-0FA42A3734BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9C204E7-49BD-465A-BB12-0FA42A3734BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9C204E7-49BD-465A-BB12-0FA42A3734BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9C204E7-49BD-465A-BB12-0FA42A3734BA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {568DE0A7-F980-47B4-9A4C-B99E2720E1FD}
+	EndGlobalSection
+EndGlobal
