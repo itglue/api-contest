@@ -59,14 +59,14 @@ function Get-CloudflareZoneData {
             <tbody>' +
     $(foreach ($Record in $ZoneRecords.result) {
             "<tr>
-                    <td>$($Record.type)</td>
-                    <td>$($Record.name)</td>
-                    <td>$($Record.content)</td>
-                    <td>$($Record.priority)</td>
-                    <td>$(if ($Record.ttl -eq 1){'Auto'}else{$Record.ttl})</td>
-                    <td>$($Record.proxied)</td>
-                    <td>$(($Record.modified_on.Replace('T', ' ') -split '\.')[0])</td>
-                </tr>"
+                <td>$($Record.type)</td>
+                <td>$($Record.name)</td>
+                <td>$($Record.content)</td>
+                <td>$($Record.priority)</td>
+                <td>$(if ($Record.ttl -eq 1){'Auto'}else{$Record.ttl})</td>
+                <td>$($Record.proxied)</td>
+                <td>$(($Record.modified_on.Replace('T', ' ') -split '\.')[0])</td>
+            </tr>"
         }) +
     '</tbody>
         </table>
