@@ -15,22 +15,19 @@
 >**Related Items:** Domain Tracker Tag  
 >**Revisions:** Flex assets contain revision history by nature (Cloudflare does not!)  
 
-## How it works
-
-- Configure
-- Schedule the sync command to run at a desired interval
+- [Installing the module](#Installing-the-module)
+- [API authorization](#API-Authorization)
+- [Usage](#Usage)
+- [Version info](#Version-History)
 
 ## Configuration
 
-[Installing the module](#installing-the-module)  
-[API Authorization](#api-authorization)  
-
 ### Installing the module
 
-Copy the CloudflareITGlue module folder into the Powershell module directory  
+Copy the CloudflareITGlue module folder into the Powershell module directory, default path:  
 >`C:\Program Files\WindowsPowerShell\Modules\CloudflareITGlue`
 
-### API Authorization
+### API authorization
 
 #### Obtain API keys
 
@@ -83,8 +80,7 @@ Sync-CloudflareITGlueFlexibleAssets
 >`Sync-CloudflareITGlueFlexibleAssets -FlexAssetType 'My Cloudflare DNS'`  
 
 Set this up to run at an interval of your choosing however you like.  
-
-- Heres a quick Powershell script you can use to create a scheduled task:  
+Heres a quick Powershell script you can use to create a scheduled task:  
 
 >```powershell
 >$Action = New-ScheduledTaskAction -Execute 'Powershell.exe' `
@@ -95,13 +91,29 @@ Set this up to run at an interval of your choosing however you like.
 ># Be sure you've added auth info for %USERNAME%
 >```
 
+## Version info
+
+- 1.0
+  - Dns zones are matched to ITGlue orgs via custom txt record mechanism
+- 1.1
+  - Dns zones are matched to ITGlue orgs automatically via Domain tracker
+- 1.2
+  - Full logging functionality
+  - Files with the same name in ITGlue on a flex asset do not appear to be unique, revision history only shows the latest file, Zone files now have a unique filename via utc timestamp and revision history now keeps copies of each file
+  - Running the sync command automatically creates the flex asset type if it does not exist
+  - Related items tagging
+  - Lowered Cloudflare request buffer
+  - Re: Zone file export format
+    - Cloudflare export format changed, modified to account for this
+    - Upon import/upload, it is normal for Cloudflare to show an error when reading the SOA record. All records are imported correctly and the SOA is not configurable by Cloudflare. The same behavior happens with an unmodified zone file export
+
 ## References
 
 [Invoke-RestMethod Documentation](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/invoke-restmethod/)  
 [ITGlue API Documentation](https://api.itglue.com/developer/)  
 [Cloudflare API Documentation](https://api.cloudflare.com/)  
 
-### ITGlue Contest Submission Info
+### ITGlue contest submission info
 
 [IT Glue's API Contest](https://www.itglue.com/api-contest/)  
 Submitted by: Jeremy Colby, [Nucleus Networks](https://yournucleus.ca/), June 27 2019  
