@@ -28,6 +28,14 @@
 #####################################################################################################################
 
 
+# This script will set a local account to a random password and update this password in ITGlue.
+# It requires PowerShell 5.0 or newer.  The ITGlueAPI only requires PowerShell 3.0, but since
+# many of the commands in the script are using PowerShell 5.0 functions for ease of use, 5.0 is required.
+#
+# Sets various environmental variables needed for the script
+#
+
+
 # The local account on the computer that will be checked.  If the account does not exist, it will be created. 
 # It will also be added to the local administrators group if it isn't already.
 $varLocalAccount = $env:LocalAdminAccount
@@ -136,7 +144,7 @@ function Get-ITGlueDevice {
     return $config
 }
 
-
+# Check for module logging
 function Test-RegistryEntry {
     # Check for registry key and object.
     param (
@@ -336,53 +344,13 @@ if ($null -eq $varITGlueDevice){
 }
 
 # This section generates a random password (length, #of symbols) and convert it to a secure string for Windows.
-# The ITGlue API is not able to parse a secure string for our purpose, so an unencrypted string must be used.
+# ITGlue is not able to parse a secure string, so an unencrypted string must be used.
 write-host "`nGenerating secure password..."
 Add-Type -AssemblyName System.Web
 $PW = [System.Web.Security.Membership]::GeneratePassword(16,4)
 $SecurePW = ($PW | ConvertTo-SecureString -AsPlainText -Force)
 
-# Check the specified account and see if it exists.  If not, create it. 
-# Set the password to the new secure password and enabled the account. (Just in case it was disabled.)
-# Since the script might later disable other local accounts, it needs to make sure this account is enabled.
-Write-Host "`nChecking local account $varLocalAccount..."
-If ((Get-LocalUser $varLocalAccount).name -eq $varLocalAccount) {
-    write-host "Local account $varLocalAccount already exists."
-    write-host "`nChecking password age..."
-    $currentPWAge = Get-LocalPasswordAge -localaccount $varlocalaccount
-    if ($maxPWAge -le $currentPWage) {
-        write-host "Password is older than $maxPWAge day(s). Updating password."
-        Set-LocalUser -Name $varLocalAccount -Password $SecurePW
-        Enable-LocalUser -Name $varLocalAccount
-    }
-    else {
-        $toosoon = 1
-        write-host "Password has been changed in the last $maxPWAge day(s). No update necessary."
-        Enable-LocalUser -Name $varLocalAccount
-    }
-}
-else {
-    write-host "Local account $varLocalAccount does not exist. Creating account. Setting password."
-    New-LocalUser -Name $varLocalAccount -Password $SecurePW -Description $varLocalAccountDescription
-}
-
-# Checks to make sure the account is part of the local administrators group and adds it if not.
-if (get-localgroupmember -group "Administrators" -member $varLocalAccount -ErrorAction SilentlyContinue) {
-    Write-Host "`nLocal account $varLocalAccount is already part of the local Administrators group."
-}
-else {
-    Add-LocalGroupMember -Group Administrators -Member $varLocalAccount
-    Write-Host "`nLocal account $varLocalAccount has been added to the local Administrators group."
-}
-
-if ($toosoon -eq 1) {
-
-}
-else {
-# Now that the device has been located in ITGlue and the local password has been set, it is time to
-# save the new password in ITGlue.
-
-# This section builds the password record to save to ITGlue with the following:
+#This section builds the password details with the following:
 # type - must be set to passwords
 # organization-id - single tick quote because of the hyphen, this is required for locating the configuration
 # name - the name of the password in quotes as text
@@ -403,24 +371,98 @@ $data = @{
 }
 
 
-#This line retrieves the old password using the organization, configuration name, and password name (will not error if no password is found)
+#This line retrieves the old password in ITGlue using the organization, configuration name, and password name (will not error if no password is found)
 $OldPass = Get-ITGluePasswords -filter_organization_id $varITGlueDevice.attributes.'organization-id' -filter_cached_resource_name $varITGlueDevice.attributes.name -filter_name "Local $varLocalAccount Admin"
 
 
-#Checks if the url for the config matches with the parent url of the embedded password - if so, the password is updated, if not then the password is created
+# Checks if the url for the config matches with the parent url of the embedded password - if so, the password is updated, if not then the password is created
+# If the password is not already in ITGlue, force a password change and save to ITGlue regardless of date of last password change.
+write-host "`nChecking to see if password exists in ITGlue."
 If ($OldPass.data.attributes.'parent-url' -eq $varITGlueDevice.attributes.'resource-url') {
-    write-host "Updating existing password in ITGlue."
-    Set-ITGluePasswords -id $Oldpass.data.id -data $data
+    write-host "`nPassword data exists in ITGlue."
+    # Check the specified local account and see if it exists.  If not, create it. 
+    # Set the password to the new secure password and enabled the account. (Just in case it was disabled.)
+    Write-Host "`nChecking local account $varLocalAccount..."
+    If ((Get-LocalUser $varLocalAccount).name -eq $varLocalAccount) {
+        write-host "Local account $varLocalAccount already exists."
+        write-host "`nChecking password age..."
+        $currentPWAge = Get-LocalPasswordAge -localaccount $varlocalaccount
+        if ($maxPWAge -le $currentPWage) {
+            write-host "Password is older than $maxPWAge day(s). Updating password."
+            Set-LocalUser -Name $varLocalAccount -Password $SecurePW
+            Enable-LocalUser -Name $varLocalAccount
+            write-host "Updating existing password in ITGlue."
+            Set-ITGluePasswords -id $Oldpass.data.id -data $data
+        }
+        else {
+            write-host "Password has been changed in the last $maxPWAge day(s). No update necessary."
+            Enable-LocalUser -Name $varLocalAccount
+        }
+    }
+    else {
+        write-host "Local account $varLocalAccount does not exist. Creating account. Setting password."
+        New-LocalUser -Name $varLocalAccount -Password $SecurePW -Description $varLocalAccountDescription
+        write-host "Updating existing password in ITGlue."
+        Set-ITGluePasswords -id $Oldpass.data.id -data $data
+    }
 }
-Else {
-    write-host "Creating new embedded password."
-    New-ITGluePasswords -data $data
+else {
+    write-host "`nNo password entry found in ITGlue.  Forcing password change."
+    If ((Get-LocalUser $varLocalAccount).name -eq $varLocalAccount) {
+        write-host "Local account $varLocalAccount already exists."
+        Set-LocalUser -Name $varLocalAccount -Password $SecurePW
+        Enable-LocalUser -Name $varLocalAccount
+        write-host "Creating new embedded password in ITGlue."
+        New-ITGluePasswords -data $data
+    }
+    else {
+        write-host "Local account $varLocalAccount does not exist. Creating account. Setting password."
+        New-LocalUser -Name $varLocalAccount -Password $SecurePW -Description $varLocalAccountDescription
+        write-host "Creating new embedded password in ITGlue."
+        New-ITGluePasswords -data $data
+    }
 }
 
 
 
 
+# Checks to make sure the account is part of the local administrators group and adds it if not.
+if (get-localgroupmember -group "Administrators" -member $varLocalAccount -ErrorAction SilentlyContinue) {
+    Write-Host "`nLocal account $varLocalAccount is already part of the local Administrators group."
 }
+else {
+    Add-LocalGroupMember -Group Administrators -Member $varLocalAccount
+    Write-Host "`nLocal account $varLocalAccount has been added to the local Administrators group."
+}
+
+if ($env:DisableAdminVariations -eq $true){
+    # Disables all the various iterations and misspellings of our Admin accounts.  For example, if you use "MSPLocalAdmin" for your admin account,
+    # and someone created an account called "MSP Local Admin" instead, you would add this  incorrect variation to this section. When the script is ran, it would create
+    # the correct local admin account name and then verify all the local accounts on the machine, and if it finds a match to a "wrong" version of your specific
+    # admin account, that account would then be disabled.  These specific accounts will be disabled regardless of disabling other local accounts on the machine.
+    # This account variations list to disable is generated outside the scope of the script.
+    write-output "`nDisabling various Local Admin Account iterations..."
+    foreach ($user in get-localuser) {
+        switch ($user.name) {
+            $varLocalAccount {write-host "No action taken for $($user.name)."; break}
+# This section below should be uncommented and cloned for each and every variation you want to disable.
+
+#            "<local account variation to disable>" {
+#                if ($user.enabled -eq $true){
+#                    write-host "Disabling local user $($user.name)."
+#                    disable-localuser $user.name
+#                }
+#                    else {
+#                        write-host "User $($user.name) is already disabled."
+#                    }
+#            }
+
+            Default {}
+        }
+    }
+}
+
+
 # If set to do so, disable other local accounts on the system.
 # If the script does not disable any local accounts, it performs an audit of the existing accounts
 # and their enabled/disabled status for reference.
@@ -476,4 +518,6 @@ else {
 }
 
 # Everything is done.  Log an 'all finished' line and exit.
+
+
 write-host "`nLocal admin account policy update has completed."
