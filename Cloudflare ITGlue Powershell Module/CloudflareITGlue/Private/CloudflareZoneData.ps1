@@ -43,9 +43,8 @@ function Get-CloudflareZoneData {
     $RecordsHtml = 
     '<div>
         <p><a class="btn btn-sm btn-default" href="https://dash.cloudflare.com/' + $AccountId + "/$($ZoneInfo.result.name)" + '/dns" rel="nofollow" style="display: inline" title="Cloudflare">
-            <i class="fa fa-fw fa-external-link"></i>
-            <span>Open in Cloudflare</span>
-        </a></p>
+        <i class="fa fa-fw fa-external-link"></i><span>Open in Cloudflare</span></a></p>
+        
         <table id="RecordTable" style="width:100%">
             <thead>
                 <th>Type</th>
@@ -57,18 +56,18 @@ function Get-CloudflareZoneData {
                 <th>Modified</th>
             </thead>
             <tbody>' +
-    $(foreach ($Record in $ZoneRecords.result) {
-            "<tr>
-                <td>$($Record.type)</td>
-                <td>$($Record.name)</td>
-                <td>$($Record.content)</td>
-                <td>$($Record.priority)</td>
-                <td>$(if ($Record.ttl -eq 1){'Auto'}else{$Record.ttl})</td>
-                <td>$($Record.proxied)</td>
-                <td>$(($Record.modified_on.Replace('T', ' ') -split '\.')[0])</td>
-            </tr>"
-        }) +
-    '</tbody>
+                $(foreach ($Record in $ZoneRecords.result) {
+                    "<tr>
+                        <td>$($Record.type)</td>
+                        <td>$($Record.name)</td>
+                        <td>$($Record.content)</td>
+                        <td>$($Record.priority)</td>
+                        <td>$(if ($Record.ttl -eq 1){'Auto'}else{$Record.ttl})</td>
+                        <td>$($Record.proxied)</td>
+                        <td>$(($Record.modified_on.Replace('T', ' ') -split '\.')[0])</td>
+                    </tr>"
+                }) +
+            '</tbody>
         </table>
     </div>'
     
