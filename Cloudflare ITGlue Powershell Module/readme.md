@@ -72,6 +72,7 @@ Sync-CloudflareITGlueFlexibleAssets
 >This command will create a new flex asset type in ITGlue called Cloudflare DNS.  
 >It will then match Cloudflare zones to ITGlue orgs using the Domain Tracker and sync the zones to their respective ITGlue organizations.  
 >Cloudflare zones that are not in the Domain Tracker will be output to the console and log file.  
+>Set this up to run at an interval of your choosing however you like.  
 >
 >There is optional logging functionality:  
 >`Sync-CloudflareITGlueFlexibleAssets -Log 'C:\Temp\cfitg.log'`  
@@ -79,8 +80,7 @@ Sync-CloudflareITGlueFlexibleAssets
 >You can use a custom name for the flex asset type via the optional FlexAssetType parameter:  
 >`Sync-CloudflareITGlueFlexibleAssets -FlexAssetType 'My Cloudflare DNS'`  
 
-Set this up to run at an interval of your choosing however you like.  
-Heres a quick Powershell script you can use to create a scheduled task:  
+- Heres a quick Powershell script you can use to create a scheduled task:  
 
 >```powershell
 >$Action = New-ScheduledTaskAction -Execute 'Powershell.exe' `
@@ -116,4 +116,4 @@ Heres a quick Powershell script you can use to create a scheduled task:
 ### ITGlue contest submission info
 
 [IT Glue's API Contest](https://www.itglue.com/api-contest/)  
-Submitted by: Jeremy Colby, [Nucleus Networks](https://yournucleus.ca/), June 27 2019  
+Submitted by: Jeremy Colby, [Nucleus Networks](https://yournucleus.ca/), June 28 2019  
