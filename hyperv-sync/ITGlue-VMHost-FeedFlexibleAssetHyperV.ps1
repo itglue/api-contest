@@ -14,7 +14,7 @@ param(
     [ValidateSet('US', 'EU')]
     [string]$data_center,
 
-    [Parameter(HelpMessage='The first part of your IT Glue URL when logging in in ')]
+    [Parameter(HelpMessage='The first part of your IT Glue URL when logging in')]
     [string]$subdomain
 )
 
