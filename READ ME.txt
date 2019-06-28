@@ -1,0 +1,24 @@
+This Script is designed to run in Syncro and to take Passwords saved in all browsers and import them into ITGlue.
+
+There are 2 global variables input through Syncro, $asset_name and $account_name which take the asset_name and account_name from Syncro respectively.
+
+All programs go to the Path "C:\TechTools\pw" for ease of access and cleanup.
+Programs needed to run the Script:
+WebBrowserPassView.exe
+psget.zip
+
+
+Windows Defender sometimes blocks the programs from running. If this happens the script will fail. When this happens just wait a minute or 2 then run again. Built into the script is a line of code that creates an exclution in Windows Defender to prevent it from stoping the script.
+----------------------------------------------------------------------------------------------------------------------------
+The script should do 5 functions:
+1. export the passwords from all browsers into a CSV file format
+2. If the Company doesn't exist in ITGlue Inform the User to syncronize the Syncro Company to ITGlue
+3. Import the CSV into the ITGlue using the API PowershellWrapper
+4. Upload the CSV to the Asset on Syncro
+5. Cleanup all the new programs and files added from running this script, with the exeption of the TechTools folder
+
+---------------------------------------------------------------------------------------------------------------------------
+Even though the script is designed to work with the SyncroMSP it can be adapted to run on any MSP or even straight on Powershell.
+To do this you need to add in the global variables $asset_name and $account_name
+Next you need to have the computer in question store the programs psget.zip and WebBrowserPassView.exe in the path "C:\TechTools\pw"
+And with that it has been adapted to whatever form is needed.
