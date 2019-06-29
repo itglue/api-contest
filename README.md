@@ -10,6 +10,7 @@ This tool is a plugin for ConnectWise Automate which enabled simple syncronizati
 This tool syncs the information every few hours and makes the data available where it's needed most, and in a format that's easily readible and filterable.
 
 - Enabling Permissions to the Glued Plugin - https://labtech-expert.itglue.com/3600496/docs/3562645
+- Syncing Warranty End Date - https://labtech-expert.itglue.com/3600496/docs/3562852
 - Password Sync - https://labtech-expert.itglue.com/DOC-3600496-3556228
 - Setup and Client Mapping - https://labtech-expert.itglue.com/DOC-3600496-3556263
 - Syncing Webroot Data - https://labtech-expert.itglue.com/DOC-3600496-3562652
@@ -19,3 +20,7 @@ This tool syncs the information every few hours and makes the data available whe
 - Script Functions - Get Flexible Asset Information - https://labtech-expert.itglue.com/3600496/docs/3562748
 - Script Functions - Upload a File to a Flexible Asset - https://labtech-expert.itglue.com/3600496/docs/3562678
 - Script Functions - Update Flexible Asset - https://labtech-expert.itglue.com/3600496/docs/3562753
+- Script Functions - Get Config Information - https://labtech-expert.itglue.com/3600496/docs/3562853
+
+
+Note: the glue icon used througout the plugin is provided by https://icons8.com.
