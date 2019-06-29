@@ -8,6 +8,32 @@ https://github.com/itglue/powershellwrapper
 .NOTES
 ITGlueAPI module should be download from above Github link into: C:\Program Files\WindowsPowerShell\Modules
 
+This script assumes the below pre-requisites:
+    - IT Glue PowerShell Wrapper is already installed
+    - IT Glue API Key has already been created
+    - IT Glue organisations that you want to sync to Office 365 tenant information to, have their Azure AD Tenant ID already listed within 
+        the IT Glue Organisation DESCRIPTION field in the format of: AADTenantID:<Azure AD Tenant ID>, for example for the contoso.com tenant:
+        AADTenantID:6babcaad-604b-40ac-a9d7-9fd97c0b779f
+    - A CSV export of Office 365 tenant data for ALL CSP customers has already been generated and available to be queried, and should contain the following headers:
+        - TenantDisplayName
+        - TenantID
+        - TenantInitialDomain
+        - VerifiedDomains
+        - DirSyncEnabled
+        - LastDirSyncTime
+        - DirSyncServiceAccount
+        - DirSyncClientMachineName
+        - DirSyncClientVersion
+        - SharePointUrl
+        - UnifiedAuditLogEnabled
+        - UnifiedAuditLogFirstEnabled
+        - OWATimeoutEnabled
+        - OWATimeoutInterval
+        - ModernAuthenticationEnabled
+        - SfBModernAuthentication
+        - TechnicalNotificationEmails
+        - TenantLicenses
+
 Author: Abul Boshor
 Version: 1.3 (21st January 2019)
 
@@ -40,8 +66,8 @@ Write-Warning "This script assumes the below pre-requisites:
         - ModernAuthenticationEnabled
         - SfBModernAuthentication
         - TechnicalNotificationEmails
-        - TenantLicenses
-    "
+        - TenantLicenses"
+
 pause
 
 $ITGlueAPIKey = Read-Host "Enter your IT Glue API Key"
