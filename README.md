@@ -12,3 +12,6 @@ This tool syncs the information every few hours and makes the data available whe
 - Enabling Permissions to the Glued Plugin - https://labtech-expert.itglue.com/3600496/docs/3562645
 - Password Sync - https://labtech-expert.itglue.com/DOC-3600496-3556228
 - Setup and Client Mapping - https://labtech-expert.itglue.com/DOC-3600496-3556263
+- Syncing Webroot Data - https://labtech-expert.itglue.com/DOC-3600496-3562652
+- Syncing MBAM Data - https://labtech-expert.itglue.com/3600496/docs/3562664
+- Network Devices Sync - https://labtech-expert.itglue.com/DOC-3600496-3562666
