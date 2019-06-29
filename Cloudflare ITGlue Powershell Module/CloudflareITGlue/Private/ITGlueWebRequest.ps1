@@ -12,13 +12,18 @@ function New-ITGlueWebRequest {
             $APIKey = [System.Runtime.InteropServices.Marshal]::PtrToStringAuto([System.Runtime.InteropServices.Marshal]::SecureStringToBSTR($ITGlueAPIKey))
         }
         catch {
-            Write-Warning 'New-ITGlueWebRequest:  Unable to decrypt auth info'
-            Write-Warning 'Run Add-CloudflareITGlueAPIAuth to re-add'
+            Write-Warning 'Unable to decrypt auth info, run Add-CloudflareITGlueAPIAuth to re-add'
+            if ($CFITGLog) {
+                "[ITG Request]$(Get-Date -Format G):  Unable to decrypt auth info, run Add-CloudflareITGlueAPIAuth to re-add" | Out-File $CFITGLog -Append
+            }
             break
         }
     }
     else {
         Write-Warning 'Run Add-CloudflareITGlueAPIAuth to add authorization info'
+        if ($CFITGLog) {
+            "[ITG Request]$(Get-Date -Format G):  Run Add-CloudflareITGlueAPIAuth to add authorization info" | Out-File $CFITGLog -Append
+        }
         break
     }
    
