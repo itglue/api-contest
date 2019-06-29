@@ -116,4 +116,4 @@ Sync-CloudflareITGlueFlexibleAssets
 ### ITGlue contest submission info
 
 [IT Glue's API Contest](https://www.itglue.com/api-contest/)  
-Submitted by: Jeremy Colby, [Nucleus Networks](https://yournucleus.ca/), June 28 2019  
+Submitted by: Jeremy Colby <<jcolby3@my.bcit.ca>>, [Nucleus Networks](https://yournucleus.ca/), June 28 2019  
