@@ -15,3 +15,7 @@ This tool syncs the information every few hours and makes the data available whe
 - Syncing Webroot Data - https://labtech-expert.itglue.com/DOC-3600496-3562652
 - Syncing MBAM Data - https://labtech-expert.itglue.com/3600496/docs/3562664
 - Network Devices Sync - https://labtech-expert.itglue.com/DOC-3600496-3562666
+- Script Functions - Get Organization ID - https://labtech-expert.itglue.com/3600496/docs/3562720
+- Script Functions - Get Flexible Asset Information - https://labtech-expert.itglue.com/3600496/docs/3562748
+- Script Functions - Upload a File to a Flexible Asset - https://labtech-expert.itglue.com/3600496/docs/3562678
+- Script Functions - Update Flexible Asset - https://labtech-expert.itglue.com/3600496/docs/3562753
