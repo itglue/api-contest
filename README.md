@@ -9,6 +9,6 @@ This tool is a plugin for ConnectWise Automate which enabled simple syncronizati
   
 This tool syncs the information every few hours and makes the data available where it's needed most, and in a format that's easily readible and filterable.
 
-Enabling Permissions to the Glued Plugin - https://labtech-expert.itglue.com/3600496/docs/3562645
-Password Sync - https://labtech-expert.itglue.com/DOC-3600496-3556228
-Setup and Client Mapping - https://labtech-expert.itglue.com/DOC-3600496-3556263
+- Enabling Permissions to the Glued Plugin - https://labtech-expert.itglue.com/3600496/docs/3562645
+- Password Sync - https://labtech-expert.itglue.com/DOC-3600496-3556228
+- Setup and Client Mapping - https://labtech-expert.itglue.com/DOC-3600496-3556263
