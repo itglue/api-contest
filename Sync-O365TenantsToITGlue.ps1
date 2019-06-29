@@ -1,6 +1,6 @@
 ﻿<# 
 .SYNOPSIS
-Automation script - Sync Office 365 tenants to IT Glue
+Sync Office 365 tenants to IT Glue
 
 .LINK
 https://github.com/itglue/powershellwrapper
@@ -33,10 +33,6 @@ This script assumes the below pre-requisites:
         - SfBModernAuthentication
         - TechnicalNotificationEmails
         - TenantLicenses
-
-Author: Abul Boshor
-Version: 1.3 (21st January 2019)
-
 #>
 
 [cmdletbinding()]
@@ -96,8 +92,8 @@ if((Get-ITGlueBaseURI) -notlike "https://api.eu.itglue.com")
 $ReportFile = Read-Host "Enter path to CSV file containing export of Office 365 tenant details"
 $O365Tenants = Import-Csv $ReportFile
 $FatID = Read-Host "Enter your IT Glue FAT (Flexible Asset ID) for the custom Office 365 Tenant object type"
-$ITGlueOrgs = Get-ITGlueOrganizations -page_size 1000 -sort name
-$ITGlueOrgs = $ITGlueOrgs.data
+$ITGlueOrgs = Get-ITGlueOrganizations -page_size 1000 -sort name | Select-Object -ExpandProperty data
+
 
 $i = 1
 $TenantsCreatedCount = 0
