@@ -1,0 +1,2536 @@
+{
+    "data": [
+        {
+            "id": "1509415",
+            "type": "flexible-asset-fields",
+            "attributes": {
+                "order": 1,
+                "name": "SonicWALL",
+                "kind": "Tag",
+                "hint": null,
+                "decimals": 0,
+                "tag-type": "Configurations",
+                "required": true,
+                "use-for-title": false,
+                "expiration": false,
+                "show-in-list": true,
+                "name-key": "sonicwall",
+                "created-at": "2019-06-04T14:21:18.000Z",
+                "updated-at": "2019-06-04T14:27:46.000Z",
+                "flexible-asset-type-id": 117956,
+                "default-value": null
+            },
+            "relationships": {
+                "flexible-asset-type": {
+                    "data": {
+                        "id": "117956",
+                        "type": "flexible-asset-types"
+                    }
+                }
+            }
+        },
+        {
+            "id": "1332064",
+            "type": "flexible-asset-fields",
+            "attributes": {
+                "order": 2,
+                "name": "SonicWALL Model",
+                "kind": "Text",
+                "hint": null,
+                "decimals": 0,
+                "tag-type": null,
+                "required": true,
+                "use-for-title": false,
+                "expiration": false,
+                "show-in-list": true,
+                "name-key": "sonicwall-model",
+                "created-at": "2019-02-04T15:04:50.000Z",
+                "updated-at": "2019-06-04T14:21:17.000Z",
+                "flexible-asset-type-id": 117956,
+                "default-value": null
+            },
+            "relationships": {
+                "flexible-asset-type": {
+                    "data": {
+                        "id": "117956",
+                        "type": "flexible-asset-types"
+                    }
+                }
+            }
+        },
+        {
+            "id": "1332065",
+            "type": "flexible-asset-fields",
+            "attributes": {
+                "order": 3,
+                "name": "SonicWALL Serial Number",
+                "kind": "Text",
+                "hint": null,
+                "decimals": 0,
+                "tag-type": null,
+                "required": true,
+                "use-for-title": false,
+                "expiration": false,
+                "show-in-list": true,
+                "name-key": "sonicwall-serial-number",
+                "created-at": "2019-02-04T15:04:50.000Z",
+                "updated-at": "2019-06-04T14:21:17.000Z",
+                "flexible-asset-type-id": 117956,
+                "default-value": null
+            },
+            "relationships": {
+                "flexible-asset-type": {
+                    "data": {
+                        "id": "117956",
+                        "type": "flexible-asset-types"
+                    }
+                }
+            }
+        },
+        {
+            "id": "1407798",
+            "type": "flexible-asset-fields",
+            "attributes": {
+                "order": 4,
+                "name": "SonicWALL Firmware Version",
+                "kind": "Text",
+                "hint": null,
+                "decimals": 0,
+                "tag-type": null,
+                "required": false,
+                "use-for-title": false,
+                "expiration": false,
+                "show-in-list": true,
+                "name-key": "sonicwall-firmware-version",
+                "created-at": "2019-03-28T13:53:34.000Z",
+                "updated-at": "2019-06-04T14:21:17.000Z",
+                "flexible-asset-type-id": 117956,
+                "default-value": null
+            },
+            "relationships": {
+                "flexible-asset-type": {
+                    "data": {
+                        "id": "117956",
+                        "type": "flexible-asset-types"
+                    }
+                }
+            }
+        },
+        {
+            "id": "1407799",
+            "type": "flexible-asset-fields",
+            "attributes": {
+                "order": 5,
+                "name": "Up Time",
+                "kind": "Text",
+                "hint": null,
+                "decimals": 0,
+                "tag-type": null,
+                "required": false,
+                "use-for-title": false,
+                "expiration": false,
+                "show-in-list": true,
+                "name-key": "up-time",
+                "created-at": "2019-03-28T13:53:34.000Z",
+                "updated-at": "2019-06-04T14:21:17.000Z",
+                "flexible-asset-type-id": 117956,
+                "default-value": null
+            },
+            "relationships": {
+                "flexible-asset-type": {
+                    "data": {
+                        "id": "117956",
+                        "type": "flexible-asset-types"
+                    }
+                }
+            }
+        },
+        {
+            "id": "1407795",
+            "type": "flexible-asset-fields",
+            "attributes": {
+                "order": 6,
+                "name": "Last Modified Date",
+                "kind": "Text",
+                "hint": null,
+                "decimals": 0,
+                "tag-type": null,
+                "required": false,
+                "use-for-title": false,
+                "expiration": false,
+                "show-in-list": true,
+                "name-key": "last-modified-date",
+                "created-at": "2019-03-28T13:32:27.000Z",
+                "updated-at": "2019-06-04T14:21:17.000Z",
+                "flexible-asset-type-id": 117956,
+                "default-value": null
+            },
+            "relationships": {
+                "flexible-asset-type": {
+                    "data": {
+                        "id": "117956",
+                        "type": "flexible-asset-types"
+                    }
+                }
+            }
+        },
+        {
+            "id": "1407796",
+            "type": "flexible-asset-fields",
+            "attributes": {
+                "order": 7,
+                "name": "External IP",
+                "kind": "Text",
+                "hint": null,
+                "decimals": 0,
+                "tag-type": null,
+                "required": false,
+                "use-for-title": false,
+                "expiration": false,
+                "show-in-list": true,
+                "name-key": "external-ip",
+                "created-at": "2019-03-28T13:32:27.000Z",
+                "updated-at": "2019-06-04T14:21:17.000Z",
+                "flexible-asset-type-id": 117956,
+                "default-value": null
+            },
+            "relationships": {
+                "flexible-asset-type": {
+                    "data": {
+                        "id": "117956",
+                        "type": "flexible-asset-types"
+                    }
+                }
+            }
+        },
+        {
+            "id": "1331378",
+            "type": "flexible-asset-fields",
+            "attributes": {
+                "order": 8,
+                "name": "Gateway Anti-Virus",
+                "kind": "Header",
+                "hint": null,
+                "decimals": 0,
+                "tag-type": null,
+                "required": false,
+                "use-for-title": false,
+                "expiration": false,
+                "show-in-list": true,
+                "name-key": "gateway-anti-virus",
+                "created-at": "2019-02-01T21:45:01.000Z",
+                "updated-at": "2019-06-04T14:21:17.000Z",
+                "flexible-asset-type-id": 117956,
+                "default-value": ""
+            },
+            "relationships": {
+                "flexible-asset-type": {
+                    "data": {
+                        "id": "117956",
+                        "type": "flexible-asset-types"
+                    }
+                }
+            }
+        },
+        {
+            "id": "1331383",
+            "type": "flexible-asset-fields",
+            "attributes": {
+                "order": 9,
+                "name": "Gateway Anti-Virus Enabled",
+                "kind": "Checkbox",
+                "hint": null,
+                "decimals": 0,
+                "tag-type": null,
+                "required": false,
+                "use-for-title": false,
+                "expiration": false,
+                "show-in-list": true,
+                "name-key": "gateway-anti-virus-enabled",
+                "created-at": "2019-02-01T21:49:06.000Z",
+                "updated-at": "2019-06-04T14:21:17.000Z",
+                "flexible-asset-type-id": 117956,
+                "default-value": ""
+            },
+            "relationships": {
+                "flexible-asset-type": {
+                    "data": {
+                        "id": "117956",
+                        "type": "flexible-asset-types"
+                    }
+                }
+            }
+        },
+        {
+            "id": "1331424",
+            "type": "flexible-asset-fields",
+            "attributes": {
+                "order": 10,
+                "name": "HTTP Inspection",
+                "kind": "Header",
+                "hint": null,
+                "decimals": 0,
+                "tag-type": null,
+                "required": false,
+                "use-for-title": false,
+                "expiration": false,
+                "show-in-list": true,
+                "name-key": "http-inspection",
+                "created-at": "2019-02-01T22:13:43.000Z",
+                "updated-at": "2019-06-04T14:21:17.000Z",
+                "flexible-asset-type-id": 117956,
+                "default-value": ""
+            },
+            "relationships": {
+                "flexible-asset-type": {
+                    "data": {
+                        "id": "117956",
+                        "type": "flexible-asset-types"
+                    }
+                }
+            }
+        },
+        {
+            "id": "1331393",
+            "type": "flexible-asset-fields",
+            "attributes": {
+                "order": 11,
+                "name": "Gateway AV HTTP Inbound Inspection",
+                "kind": "Checkbox",
+                "hint": null,
+                "decimals": 0,
+                "tag-type": null,
+                "required": false,
+                "use-for-title": false,
+                "expiration": false,
+                "show-in-list": true,
+                "name-key": "gateway-av-http-inbound-inspection",
+                "created-at": "2019-02-01T22:08:08.000Z",
+                "updated-at": "2019-06-04T14:21:17.000Z",
+                "flexible-asset-type-id": 117956,
+                "default-value": ""
+            },
+            "relationships": {
+                "flexible-asset-type": {
+                    "data": {
+                        "id": "117956",
+                        "type": "flexible-asset-types"
+                    }
+                }
+            }
+        },
+        {
+            "id": "1331394",
+            "type": "flexible-asset-fields",
+            "attributes": {
+                "order": 12,
+                "name": "Gateway AV HTTP Outbound Inspection",
+                "kind": "Checkbox",
+                "hint": null,
+                "decimals": 0,
+                "tag-type": null,
+                "required": false,
+                "use-for-title": false,
+                "expiration": false,
+                "show-in-list": true,
+                "name-key": "gateway-av-http-outbound-inspection",
+                "created-at": "2019-02-01T22:08:08.000Z",
+                "updated-at": "2019-06-04T14:21:17.000Z",
+                "flexible-asset-type-id": 117956,
+                "default-value": ""
+            },
+            "relationships": {
+                "flexible-asset-type": {
+                    "data": {
+                        "id": "117956",
+                        "type": "flexible-asset-types"
+                    }
+                }
+            }
+        },
+        {
+            "id": "1331395",
+            "type": "flexible-asset-fields",
+            "attributes": {
+                "order": 13,
+                "name": "Gateway AV HTTP Password Zip Files Inspection",
+                "kind": "Checkbox",
+                "hint": null,
+                "decimals": 0,
+                "tag-type": null,
+                "required": false,
+                "use-for-title": false,
+                "expiration": false,
+                "show-in-list": true,
+                "name-key": "gateway-av-http-password-zip-files-inspection",
+                "created-at": "2019-02-01T22:08:08.000Z",
+                "updated-at": "2019-06-04T14:21:17.000Z",
+                "flexible-asset-type-id": 117956,
+                "default-value": ""
+            },
+            "relationships": {
+                "flexible-asset-type": {
+                    "data": {
+                        "id": "117956",
+                        "type": "flexible-asset-types"
+                    }
+                }
+            }
+        },
+        {
+            "id": "1331396",
+            "type": "flexible-asset-fields",
+            "attributes": {
+                "order": 14,
+                "name": "Gateway AV HTTP Packed EXE Files Inspection",
+                "kind": "Checkbox",
+                "hint": null,
+                "decimals": 0,
+                "tag-type": null,
+                "required": false,
+                "use-for-title": false,
+                "expiration": false,
+                "show-in-list": true,
+                "name-key": "gateway-av-http-packed-exe-files-inspection",
+                "created-at": "2019-02-01T22:08:08.000Z",
+                "updated-at": "2019-06-04T14:21:17.000Z",
+                "flexible-asset-type-id": 117956,
+                "default-value": ""
+            },
+            "relationships": {
+                "flexible-asset-type": {
+                    "data": {
+                        "id": "117956",
+                        "type": "flexible-asset-types"
+                    }
+                }
+            }
+        },
+        {
+            "id": "1331397",
+            "type": "flexible-asset-fields",
+            "attributes": {
+                "order": 15,
+                "name": "Gateway AV HTTP Marco Files Inspection",
+                "kind": "Checkbox",
+                "hint": null,
+                "decimals": 0,
+                "tag-type": null,
+                "required": false,
+                "use-for-title": false,
+                "expiration": false,
+                "show-in-list": true,
+                "name-key": "gateway-av-http-marco-files-inspection",
+                "created-at": "2019-02-01T22:08:08.000Z",
+                "updated-at": "2019-06-04T14:21:17.000Z",
+                "flexible-asset-type-id": 117956,
+                "default-value": ""
+            },
+            "relationships": {
+                "flexible-asset-type": {
+                    "data": {
+                        "id": "117956",
+                        "type": "flexible-asset-types"
+                    }
+                }
+            }
+        },
+        {
+            "id": "1331425",
+            "type": "flexible-asset-fields",
+            "attributes": {
+                "order": 16,
+                "name": "FTP Inspection",
+                "kind": "Header",
+                "hint": null,
+                "decimals": 0,
+                "tag-type": null,
+                "required": false,
+                "use-for-title": false,
+                "expiration": false,
+                "show-in-list": true,
+                "name-key": "ftp-inspection",
+                "created-at": "2019-02-01T22:13:43.000Z",
+                "updated-at": "2019-06-04T14:21:17.000Z",
+                "flexible-asset-type-id": 117956,
+                "default-value": ""
+            },
+            "relationships": {
+                "flexible-asset-type": {
+                    "data": {
+                        "id": "117956",
+                        "type": "flexible-asset-types"
+                    }
+                }
+            }
+        },
+        {
+            "id": "1331398",
+            "type": "flexible-asset-fields",
+            "attributes": {
+                "order": 17,
+                "name": "Gateway AV FTP Inbound Inspection",
+                "kind": "Checkbox",
+                "hint": null,
+                "decimals": 0,
+                "tag-type": null,
+                "required": false,
+                "use-for-title": false,
+                "expiration": false,
+                "show-in-list": true,
+                "name-key": "gateway-av-ftp-inbound-inspection",
+                "created-at": "2019-02-01T22:08:08.000Z",
+                "updated-at": "2019-06-04T14:21:17.000Z",
+                "flexible-asset-type-id": 117956,
+                "default-value": ""
+            },
+            "relationships": {
+                "flexible-asset-type": {
+                    "data": {
+                        "id": "117956",
+                        "type": "flexible-asset-types"
+                    }
+                }
+            }
+        },
+        {
+            "id": "1331399",
+            "type": "flexible-asset-fields",
+            "attributes": {
+                "order": 18,
+                "name": "Gateway AV FTP Outbound Inspection",
+                "kind": "Checkbox",
+                "hint": null,
+                "decimals": 0,
+                "tag-type": null,
+                "required": false,
+                "use-for-title": false,
+                "expiration": false,
+                "show-in-list": true,
+                "name-key": "gateway-av-ftp-outbound-inspection",
+                "created-at": "2019-02-01T22:08:08.000Z",
+                "updated-at": "2019-06-04T14:21:17.000Z",
+                "flexible-asset-type-id": 117956,
+                "default-value": ""
+            },
+            "relationships": {
+                "flexible-asset-type": {
+                    "data": {
+                        "id": "117956",
+                        "type": "flexible-asset-types"
+                    }
+                }
+            }
+        },
+        {
+            "id": "1331400",
+            "type": "flexible-asset-fields",
+            "attributes": {
+                "order": 19,
+                "name": "Gateway AV FTP Password Zip File Inspection",
+                "kind": "Checkbox",
+                "hint": null,
+                "decimals": 0,
+                "tag-type": null,
+                "required": false,
+                "use-for-title": false,
+                "expiration": false,
+                "show-in-list": true,
+                "name-key": "gateway-av-ftp-password-zip-file-inspection",
+                "created-at": "2019-02-01T22:08:08.000Z",
+                "updated-at": "2019-06-04T14:21:17.000Z",
+                "flexible-asset-type-id": 117956,
+                "default-value": ""
+            },
+            "relationships": {
+                "flexible-asset-type": {
+                    "data": {
+                        "id": "117956",
+                        "type": "flexible-asset-types"
+                    }
+                }
+            }
+        },
+        {
+            "id": "1331401",
+            "type": "flexible-asset-fields",
+            "attributes": {
+                "order": 20,
+                "name": "Gateway AV FTP Packed EXE File Inspection",
+                "kind": "Checkbox",
+                "hint": null,
+                "decimals": 0,
+                "tag-type": null,
+                "required": false,
+                "use-for-title": false,
+                "expiration": false,
+                "show-in-list": true,
+                "name-key": "gateway-av-ftp-packed-exe-file-inspection",
+                "created-at": "2019-02-01T22:08:08.000Z",
+                "updated-at": "2019-06-04T14:21:17.000Z",
+                "flexible-asset-type-id": 117956,
+                "default-value": ""
+            },
+            "relationships": {
+                "flexible-asset-type": {
+                    "data": {
+                        "id": "117956",
+                        "type": "flexible-asset-types"
+                    }
+                }
+            }
+        },
+        {
+            "id": "1331402",
+            "type": "flexible-asset-fields",
+            "attributes": {
+                "order": 21,
+                "name": "Gateway AV FTP Marco File Inspection",
+                "kind": "Checkbox",
+                "hint": null,
+                "decimals": 0,
+                "tag-type": null,
+                "required": false,
+                "use-for-title": false,
+                "expiration": false,
+                "show-in-list": true,
+                "name-key": "gateway-av-ftp-marco-file-inspection",
+                "created-at": "2019-02-01T22:08:08.000Z",
+                "updated-at": "2019-06-04T14:21:17.000Z",
+                "flexible-asset-type-id": 117956,
+                "default-value": ""
+            },
+            "relationships": {
+                "flexible-asset-type": {
+                    "data": {
+                        "id": "117956",
+                        "type": "flexible-asset-types"
+                    }
+                }
+            }
+        },
+        {
+            "id": "1331426",
+            "type": "flexible-asset-fields",
+            "attributes": {
+                "order": 22,
+                "name": "IMAP Inspection",
+                "kind": "Header",
+                "hint": null,
+                "decimals": 0,
+                "tag-type": null,
+                "required": false,
+                "use-for-title": false,
+                "expiration": false,
+                "show-in-list": true,
+                "name-key": "imap-inspection",
+                "created-at": "2019-02-01T22:13:43.000Z",
+                "updated-at": "2019-06-04T14:21:17.000Z",
+                "flexible-asset-type-id": 117956,
+                "default-value": ""
+            },
+            "relationships": {
+                "flexible-asset-type": {
+                    "data": {
+                        "id": "117956",
+                        "type": "flexible-asset-types"
+                    }
+                }
+            }
+        },
+        {
+            "id": "1331403",
+            "type": "flexible-asset-fields",
+            "attributes": {
+                "order": 23,
+                "name": "Gateway AV IMAP Inbound Inspection",
+                "kind": "Checkbox",
+                "hint": null,
+                "decimals": 0,
+                "tag-type": null,
+                "required": false,
+                "use-for-title": false,
+                "expiration": false,
+                "show-in-list": true,
+                "name-key": "gateway-av-imap-inbound-inspection",
+                "created-at": "2019-02-01T22:08:08.000Z",
+                "updated-at": "2019-06-04T14:21:17.000Z",
+                "flexible-asset-type-id": 117956,
+                "default-value": ""
+            },
+            "relationships": {
+                "flexible-asset-type": {
+                    "data": {
+                        "id": "117956",
+                        "type": "flexible-asset-types"
+                    }
+                }
+            }
+        },
+        {
+            "id": "1331404",
+            "type": "flexible-asset-fields",
+            "attributes": {
+                "order": 24,
+                "name": "Gateway AV IMAP Password Zip File Inspection",
+                "kind": "Checkbox",
+                "hint": null,
+                "decimals": 0,
+                "tag-type": null,
+                "required": false,
+                "use-for-title": false,
+                "expiration": false,
+                "show-in-list": true,
+                "name-key": "gateway-av-imap-password-zip-file-inspection",
+                "created-at": "2019-02-01T22:08:08.000Z",
+                "updated-at": "2019-06-04T14:21:17.000Z",
+                "flexible-asset-type-id": 117956,
+                "default-value": ""
+            },
+            "relationships": {
+                "flexible-asset-type": {
+                    "data": {
+                        "id": "117956",
+                        "type": "flexible-asset-types"
+                    }
+                }
+            }
+        },
+        {
+            "id": "1331405",
+            "type": "flexible-asset-fields",
+            "attributes": {
+                "order": 25,
+                "name": "Gateway AV IMAP Packed EXE File Inspection",
+                "kind": "Checkbox",
+                "hint": null,
+                "decimals": 0,
+                "tag-type": null,
+                "required": false,
+                "use-for-title": false,
+                "expiration": false,
+                "show-in-list": true,
+                "name-key": "gateway-av-imap-packed-exe-file-inspection",
+                "created-at": "2019-02-01T22:08:08.000Z",
+                "updated-at": "2019-06-04T14:21:17.000Z",
+                "flexible-asset-type-id": 117956,
+                "default-value": ""
+            },
+            "relationships": {
+                "flexible-asset-type": {
+                    "data": {
+                        "id": "117956",
+                        "type": "flexible-asset-types"
+                    }
+                }
+            }
+        },
+        {
+            "id": "1331406",
+            "type": "flexible-asset-fields",
+            "attributes": {
+                "order": 26,
+                "name": "Gateway AV IMAP Marco File Inspecition",
+                "kind": "Checkbox",
+                "hint": null,
+                "decimals": 0,
+                "tag-type": null,
+                "required": false,
+                "use-for-title": false,
+                "expiration": false,
+                "show-in-list": true,
+                "name-key": "gateway-av-imap-marco-file-inspecition",
+                "created-at": "2019-02-01T22:08:08.000Z",
+                "updated-at": "2019-06-04T14:21:17.000Z",
+                "flexible-asset-type-id": 117956,
+                "default-value": ""
+            },
+            "relationships": {
+                "flexible-asset-type": {
+                    "data": {
+                        "id": "117956",
+                        "type": "flexible-asset-types"
+                    }
+                }
+            }
+        },
+        {
+            "id": "1331427",
+            "type": "flexible-asset-fields",
+            "attributes": {
+                "order": 27,
+                "name": "SMTP Inspection",
+                "kind": "Header",
+                "hint": null,
+                "decimals": 0,
+                "tag-type": null,
+                "required": false,
+                "use-for-title": false,
+                "expiration": false,
+                "show-in-list": true,
+                "name-key": "smtp-inspection",
+                "created-at": "2019-02-01T22:13:43.000Z",
+                "updated-at": "2019-06-04T14:21:17.000Z",
+                "flexible-asset-type-id": 117956,
+                "default-value": ""
+            },
+            "relationships": {
+                "flexible-asset-type": {
+                    "data": {
+                        "id": "117956",
+                        "type": "flexible-asset-types"
+                    }
+                }
+            }
+        },
+        {
+            "id": "1331407",
+            "type": "flexible-asset-fields",
+            "attributes": {
+                "order": 28,
+                "name": "Gateway AV SMTP Inbound Inspection",
+                "kind": "Checkbox",
+                "hint": null,
+                "decimals": 0,
+                "tag-type": null,
+                "required": false,
+                "use-for-title": false,
+                "expiration": false,
+                "show-in-list": true,
+                "name-key": "gateway-av-smtp-inbound-inspection",
+                "created-at": "2019-02-01T22:08:08.000Z",
+                "updated-at": "2019-06-04T14:21:17.000Z",
+                "flexible-asset-type-id": 117956,
+                "default-value": ""
+            },
+            "relationships": {
+                "flexible-asset-type": {
+                    "data": {
+                        "id": "117956",
+                        "type": "flexible-asset-types"
+                    }
+                }
+            }
+        },
+        {
+            "id": "1331408",
+            "type": "flexible-asset-fields",
+            "attributes": {
+                "order": 29,
+                "name": "Gateway AV SMTP Outbound Inspection",
+                "kind": "Checkbox",
+                "hint": null,
+                "decimals": 0,
+                "tag-type": null,
+                "required": false,
+                "use-for-title": false,
+                "expiration": false,
+                "show-in-list": true,
+                "name-key": "gateway-av-smtp-outbound-inspection",
+                "created-at": "2019-02-01T22:08:08.000Z",
+                "updated-at": "2019-06-04T14:21:17.000Z",
+                "flexible-asset-type-id": 117956,
+                "default-value": ""
+            },
+            "relationships": {
+                "flexible-asset-type": {
+                    "data": {
+                        "id": "117956",
+                        "type": "flexible-asset-types"
+                    }
+                }
+            }
+        },
+        {
+            "id": "1331409",
+            "type": "flexible-asset-fields",
+            "attributes": {
+                "order": 30,
+                "name": "Gateway AV SMTP Password Zip File Inspection",
+                "kind": "Checkbox",
+                "hint": null,
+                "decimals": 0,
+                "tag-type": null,
+                "required": false,
+                "use-for-title": false,
+                "expiration": false,
+                "show-in-list": true,
+                "name-key": "gateway-av-smtp-password-zip-file-inspection",
+                "created-at": "2019-02-01T22:08:08.000Z",
+                "updated-at": "2019-06-04T14:21:17.000Z",
+                "flexible-asset-type-id": 117956,
+                "default-value": ""
+            },
+            "relationships": {
+                "flexible-asset-type": {
+                    "data": {
+                        "id": "117956",
+                        "type": "flexible-asset-types"
+                    }
+                }
+            }
+        },
+        {
+            "id": "1331410",
+            "type": "flexible-asset-fields",
+            "attributes": {
+                "order": 31,
+                "name": "Gateway AV SMTP Packed EXE File Inspection",
+                "kind": "Checkbox",
+                "hint": null,
+                "decimals": 0,
+                "tag-type": null,
+                "required": false,
+                "use-for-title": false,
+                "expiration": false,
+                "show-in-list": true,
+                "name-key": "gateway-av-smtp-packed-exe-file-inspection",
+                "created-at": "2019-02-01T22:08:08.000Z",
+                "updated-at": "2019-06-04T14:21:17.000Z",
+                "flexible-asset-type-id": 117956,
+                "default-value": ""
+            },
+            "relationships": {
+                "flexible-asset-type": {
+                    "data": {
+                        "id": "117956",
+                        "type": "flexible-asset-types"
+                    }
+                }
+            }
+        },
+        {
+            "id": "1331411",
+            "type": "flexible-asset-fields",
+            "attributes": {
+                "order": 32,
+                "name": "Gateway AV SMTP Marco File Inspection",
+                "kind": "Checkbox",
+                "hint": null,
+                "decimals": 0,
+                "tag-type": null,
+                "required": false,
+                "use-for-title": false,
+                "expiration": false,
+                "show-in-list": true,
+                "name-key": "gateway-av-smtp-marco-file-inspection",
+                "created-at": "2019-02-01T22:08:08.000Z",
+                "updated-at": "2019-06-04T14:21:17.000Z",
+                "flexible-asset-type-id": 117956,
+                "default-value": ""
+            },
+            "relationships": {
+                "flexible-asset-type": {
+                    "data": {
+                        "id": "117956",
+                        "type": "flexible-asset-types"
+                    }
+                }
+            }
+        },
+        {
+            "id": "1331428",
+            "type": "flexible-asset-fields",
+            "attributes": {
+                "order": 33,
+                "name": "POP3 Inspection",
+                "kind": "Header",
+                "hint": null,
+                "decimals": 0,
+                "tag-type": null,
+                "required": false,
+                "use-for-title": false,
+                "expiration": false,
+                "show-in-list": true,
+                "name-key": "pop3-inspection",
+                "created-at": "2019-02-01T22:13:43.000Z",
+                "updated-at": "2019-06-04T14:21:18.000Z",
+                "flexible-asset-type-id": 117956,
+                "default-value": ""
+            },
+            "relationships": {
+                "flexible-asset-type": {
+                    "data": {
+                        "id": "117956",
+                        "type": "flexible-asset-types"
+                    }
+                }
+            }
+        },
+        {
+            "id": "1331412",
+            "type": "flexible-asset-fields",
+            "attributes": {
+                "order": 34,
+                "name": "Gateway AV POP3 Inbound Inspection",
+                "kind": "Checkbox",
+                "hint": null,
+                "decimals": 0,
+                "tag-type": null,
+                "required": false,
+                "use-for-title": false,
+                "expiration": false,
+                "show-in-list": true,
+                "name-key": "gateway-av-pop3-inbound-inspection",
+                "created-at": "2019-02-01T22:08:08.000Z",
+                "updated-at": "2019-06-04T14:21:18.000Z",
+                "flexible-asset-type-id": 117956,
+                "default-value": ""
+            },
+            "relationships": {
+                "flexible-asset-type": {
+                    "data": {
+                        "id": "117956",
+                        "type": "flexible-asset-types"
+                    }
+                }
+            }
+        },
+        {
+            "id": "1331413",
+            "type": "flexible-asset-fields",
+            "attributes": {
+                "order": 35,
+                "name": "Gateway AV POP3 Password Zip File Inspection",
+                "kind": "Checkbox",
+                "hint": null,
+                "decimals": 0,
+                "tag-type": null,
+                "required": false,
+                "use-for-title": false,
+                "expiration": false,
+                "show-in-list": true,
+                "name-key": "gateway-av-pop3-password-zip-file-inspection",
+                "created-at": "2019-02-01T22:08:08.000Z",
+                "updated-at": "2019-06-04T14:21:18.000Z",
+                "flexible-asset-type-id": 117956,
+                "default-value": ""
+            },
+            "relationships": {
+                "flexible-asset-type": {
+                    "data": {
+                        "id": "117956",
+                        "type": "flexible-asset-types"
+                    }
+                }
+            }
+        },
+        {
+            "id": "1331414",
+            "type": "flexible-asset-fields",
+            "attributes": {
+                "order": 36,
+                "name": "Gateway AV POP3 Packed EXE File Inspection",
+                "kind": "Checkbox",
+                "hint": null,
+                "decimals": 0,
+                "tag-type": null,
+                "required": false,
+                "use-for-title": false,
+                "expiration": false,
+                "show-in-list": true,
+                "name-key": "gateway-av-pop3-packed-exe-file-inspection",
+                "created-at": "2019-02-01T22:08:08.000Z",
+                "updated-at": "2019-06-04T14:21:18.000Z",
+                "flexible-asset-type-id": 117956,
+                "default-value": ""
+            },
+            "relationships": {
+                "flexible-asset-type": {
+                    "data": {
+                        "id": "117956",
+                        "type": "flexible-asset-types"
+                    }
+                }
+            }
+        },
+        {
+            "id": "1331415",
+            "type": "flexible-asset-fields",
+            "attributes": {
+                "order": 37,
+                "name": "Gateway AV POP3 Macro File Inspection",
+                "kind": "Checkbox",
+                "hint": null,
+                "decimals": 0,
+                "tag-type": null,
+                "required": false,
+                "use-for-title": false,
+                "expiration": false,
+                "show-in-list": true,
+                "name-key": "gateway-av-pop3-macro-file-inspection",
+                "created-at": "2019-02-01T22:08:08.000Z",
+                "updated-at": "2019-06-04T14:21:18.000Z",
+                "flexible-asset-type-id": 117956,
+                "default-value": ""
+            },
+            "relationships": {
+                "flexible-asset-type": {
+                    "data": {
+                        "id": "117956",
+                        "type": "flexible-asset-types"
+                    }
+                }
+            }
+        },
+        {
+            "id": "1331429",
+            "type": "flexible-asset-fields",
+            "attributes": {
+                "order": 38,
+                "name": "CIFS Inspection",
+                "kind": "Header",
+                "hint": null,
+                "decimals": 0,
+                "tag-type": null,
+                "required": false,
+                "use-for-title": false,
+                "expiration": false,
+                "show-in-list": true,
+                "name-key": "cifs-inspection",
+                "created-at": "2019-02-01T22:13:43.000Z",
+                "updated-at": "2019-06-04T14:21:18.000Z",
+                "flexible-asset-type-id": 117956,
+                "default-value": ""
+            },
+            "relationships": {
+                "flexible-asset-type": {
+                    "data": {
+                        "id": "117956",
+                        "type": "flexible-asset-types"
+                    }
+                }
+            }
+        },
+        {
+            "id": "1331416",
+            "type": "flexible-asset-fields",
+            "attributes": {
+                "order": 39,
+                "name": "Gateway AV CIFS Inbound Inspection",
+                "kind": "Checkbox",
+                "hint": null,
+                "decimals": 0,
+                "tag-type": null,
+                "required": false,
+                "use-for-title": false,
+                "expiration": false,
+                "show-in-list": true,
+                "name-key": "gateway-av-cifs-inbound-inspection",
+                "created-at": "2019-02-01T22:08:08.000Z",
+                "updated-at": "2019-06-04T14:21:18.000Z",
+                "flexible-asset-type-id": 117956,
+                "default-value": ""
+            },
+            "relationships": {
+                "flexible-asset-type": {
+                    "data": {
+                        "id": "117956",
+                        "type": "flexible-asset-types"
+                    }
+                }
+            }
+        },
+        {
+            "id": "1331417",
+            "type": "flexible-asset-fields",
+            "attributes": {
+                "order": 40,
+                "name": "Gateway AV CIFS Password Zip File Inspection",
+                "kind": "Checkbox",
+                "hint": null,
+                "decimals": 0,
+                "tag-type": null,
+                "required": false,
+                "use-for-title": false,
+                "expiration": false,
+                "show-in-list": true,
+                "name-key": "gateway-av-cifs-password-zip-file-inspection",
+                "created-at": "2019-02-01T22:08:08.000Z",
+                "updated-at": "2019-06-04T14:21:18.000Z",
+                "flexible-asset-type-id": 117956,
+                "default-value": ""
+            },
+            "relationships": {
+                "flexible-asset-type": {
+                    "data": {
+                        "id": "117956",
+                        "type": "flexible-asset-types"
+                    }
+                }
+            }
+        },
+        {
+            "id": "1331418",
+            "type": "flexible-asset-fields",
+            "attributes": {
+                "order": 41,
+                "name": "Gateway AV CIFS Packed EXE File Inspection",
+                "kind": "Checkbox",
+                "hint": null,
+                "decimals": 0,
+                "tag-type": null,
+                "required": false,
+                "use-for-title": false,
+                "expiration": false,
+                "show-in-list": true,
+                "name-key": "gateway-av-cifs-packed-exe-file-inspection",
+                "created-at": "2019-02-01T22:08:08.000Z",
+                "updated-at": "2019-06-04T14:21:18.000Z",
+                "flexible-asset-type-id": 117956,
+                "default-value": ""
+            },
+            "relationships": {
+                "flexible-asset-type": {
+                    "data": {
+                        "id": "117956",
+                        "type": "flexible-asset-types"
+                    }
+                }
+            }
+        },
+        {
+            "id": "1331419",
+            "type": "flexible-asset-fields",
+            "attributes": {
+                "order": 42,
+                "name": "Gateway AV CIFS Macro File Inspection",
+                "kind": "Checkbox",
+                "hint": null,
+                "decimals": 0,
+                "tag-type": null,
+                "required": false,
+                "use-for-title": false,
+                "expiration": false,
+                "show-in-list": true,
+                "name-key": "gateway-av-cifs-macro-file-inspection",
+                "created-at": "2019-02-01T22:08:08.000Z",
+                "updated-at": "2019-06-04T14:21:18.000Z",
+                "flexible-asset-type-id": 117956,
+                "default-value": ""
+            },
+            "relationships": {
+                "flexible-asset-type": {
+                    "data": {
+                        "id": "117956",
+                        "type": "flexible-asset-types"
+                    }
+                }
+            }
+        },
+        {
+            "id": "1331430",
+            "type": "flexible-asset-fields",
+            "attributes": {
+                "order": 43,
+                "name": "TCP Stream Inspection",
+                "kind": "Header",
+                "hint": null,
+                "decimals": 0,
+                "tag-type": null,
+                "required": false,
+                "use-for-title": false,
+                "expiration": false,
+                "show-in-list": true,
+                "name-key": "tcp-stream-inspection",
+                "created-at": "2019-02-01T22:13:43.000Z",
+                "updated-at": "2019-06-04T14:21:18.000Z",
+                "flexible-asset-type-id": 117956,
+                "default-value": ""
+            },
+            "relationships": {
+                "flexible-asset-type": {
+                    "data": {
+                        "id": "117956",
+                        "type": "flexible-asset-types"
+                    }
+                }
+            }
+        },
+        {
+            "id": "1331420",
+            "type": "flexible-asset-fields",
+            "attributes": {
+                "order": 44,
+                "name": "Gateway AV TCP Stream Inbound Inspection",
+                "kind": "Checkbox",
+                "hint": null,
+                "decimals": 0,
+                "tag-type": null,
+                "required": false,
+                "use-for-title": false,
+                "expiration": false,
+                "show-in-list": true,
+                "name-key": "gateway-av-tcp-stream-inbound-inspection",
+                "created-at": "2019-02-01T22:08:08.000Z",
+                "updated-at": "2019-06-04T14:21:18.000Z",
+                "flexible-asset-type-id": 117956,
+                "default-value": ""
+            },
+            "relationships": {
+                "flexible-asset-type": {
+                    "data": {
+                        "id": "117956",
+                        "type": "flexible-asset-types"
+                    }
+                }
+            }
+        },
+        {
+            "id": "1331421",
+            "type": "flexible-asset-fields",
+            "attributes": {
+                "order": 45,
+                "name": "Gateway AV TCP Stream Outbound Inspection",
+                "kind": "Checkbox",
+                "hint": null,
+                "decimals": 0,
+                "tag-type": null,
+                "required": false,
+                "use-for-title": false,
+                "expiration": false,
+                "show-in-list": true,
+                "name-key": "gateway-av-tcp-stream-outbound-inspection",
+                "created-at": "2019-02-01T22:08:08.000Z",
+                "updated-at": "2019-06-04T14:21:18.000Z",
+                "flexible-asset-type-id": 117956,
+                "default-value": ""
+            },
+            "relationships": {
+                "flexible-asset-type": {
+                    "data": {
+                        "id": "117956",
+                        "type": "flexible-asset-types"
+                    }
+                }
+            }
+        },
+        {
+            "id": "1333209",
+            "type": "flexible-asset-fields",
+            "attributes": {
+                "order": 46,
+                "name": "Intrusion Prevention System",
+                "kind": "Header",
+                "hint": null,
+                "decimals": 0,
+                "tag-type": null,
+                "required": false,
+                "use-for-title": false,
+                "expiration": false,
+                "show-in-list": true,
+                "name-key": "intrusion-prevention-system",
+                "created-at": "2019-02-04T20:15:39.000Z",
+                "updated-at": "2019-06-04T14:21:18.000Z",
+                "flexible-asset-type-id": 117956,
+                "default-value": ""
+            },
+            "relationships": {
+                "flexible-asset-type": {
+                    "data": {
+                        "id": "117956",
+                        "type": "flexible-asset-types"
+                    }
+                }
+            }
+        },
+        {
+            "id": "1333210",
+            "type": "flexible-asset-fields",
+            "attributes": {
+                "order": 47,
+                "name": "Intrusion Prevention System Enabled",
+                "kind": "Checkbox",
+                "hint": null,
+                "decimals": 0,
+                "tag-type": null,
+                "required": false,
+                "use-for-title": false,
+                "expiration": false,
+                "show-in-list": true,
+                "name-key": "intrusion-prevention-system-enabled",
+                "created-at": "2019-02-04T20:15:39.000Z",
+                "updated-at": "2019-06-04T14:21:18.000Z",
+                "flexible-asset-type-id": 117956,
+                "default-value": ""
+            },
+            "relationships": {
+                "flexible-asset-type": {
+                    "data": {
+                        "id": "117956",
+                        "type": "flexible-asset-types"
+                    }
+                }
+            }
+        },
+        {
+            "id": "1333211",
+            "type": "flexible-asset-fields",
+            "attributes": {
+                "order": 48,
+                "name": "High Priority Attacks",
+                "kind": "Header",
+                "hint": null,
+                "decimals": 0,
+                "tag-type": null,
+                "required": false,
+                "use-for-title": false,
+                "expiration": false,
+                "show-in-list": true,
+                "name-key": "high-priority-attacks",
+                "created-at": "2019-02-04T20:15:39.000Z",
+                "updated-at": "2019-06-04T14:21:18.000Z",
+                "flexible-asset-type-id": 117956,
+                "default-value": ""
+            },
+            "relationships": {
+                "flexible-asset-type": {
+                    "data": {
+                        "id": "117956",
+                        "type": "flexible-asset-types"
+                    }
+                }
+            }
+        },
+        {
+            "id": "1333212",
+            "type": "flexible-asset-fields",
+            "attributes": {
+                "order": 49,
+                "name": "Prevent High Priority Attacks",
+                "kind": "Checkbox",
+                "hint": null,
+                "decimals": 0,
+                "tag-type": null,
+                "required": false,
+                "use-for-title": false,
+                "expiration": false,
+                "show-in-list": true,
+                "name-key": "prevent-high-priority-attacks",
+                "created-at": "2019-02-04T20:15:39.000Z",
+                "updated-at": "2019-06-04T14:21:18.000Z",
+                "flexible-asset-type-id": 117956,
+                "default-value": ""
+            },
+            "relationships": {
+                "flexible-asset-type": {
+                    "data": {
+                        "id": "117956",
+                        "type": "flexible-asset-types"
+                    }
+                }
+            }
+        },
+        {
+            "id": "1333213",
+            "type": "flexible-asset-fields",
+            "attributes": {
+                "order": 50,
+                "name": "Detect High Priority Attacks",
+                "kind": "Checkbox",
+                "hint": null,
+                "decimals": 0,
+                "tag-type": null,
+                "required": false,
+                "use-for-title": false,
+                "expiration": false,
+                "show-in-list": true,
+                "name-key": "detect-high-priority-attacks",
+                "created-at": "2019-02-04T20:15:39.000Z",
+                "updated-at": "2019-06-04T14:21:18.000Z",
+                "flexible-asset-type-id": 117956,
+                "default-value": ""
+            },
+            "relationships": {
+                "flexible-asset-type": {
+                    "data": {
+                        "id": "117956",
+                        "type": "flexible-asset-types"
+                    }
+                }
+            }
+        },
+        {
+            "id": "1333214",
+            "type": "flexible-asset-fields",
+            "attributes": {
+                "order": 51,
+                "name": "Log High Priority Attacks",
+                "kind": "Checkbox",
+                "hint": null,
+                "decimals": 0,
+                "tag-type": null,
+                "required": false,
+                "use-for-title": false,
+                "expiration": false,
+                "show-in-list": true,
+                "name-key": "log-high-priority-attacks",
+                "created-at": "2019-02-04T20:15:39.000Z",
+                "updated-at": "2019-06-04T14:21:18.000Z",
+                "flexible-asset-type-id": 117956,
+                "default-value": ""
+            },
+            "relationships": {
+                "flexible-asset-type": {
+                    "data": {
+                        "id": "117956",
+                        "type": "flexible-asset-types"
+                    }
+                }
+            }
+        },
+        {
+            "id": "1333215",
+            "type": "flexible-asset-fields",
+            "attributes": {
+                "order": 52,
+                "name": "Medium Priority Attacks",
+                "kind": "Header",
+                "hint": null,
+                "decimals": 0,
+                "tag-type": null,
+                "required": false,
+                "use-for-title": false,
+                "expiration": false,
+                "show-in-list": true,
+                "name-key": "medium-priority-attacks",
+                "created-at": "2019-02-04T20:15:39.000Z",
+                "updated-at": "2019-06-04T14:21:18.000Z",
+                "flexible-asset-type-id": 117956,
+                "default-value": ""
+            },
+            "relationships": {
+                "flexible-asset-type": {
+                    "data": {
+                        "id": "117956",
+                        "type": "flexible-asset-types"
+                    }
+                }
+            }
+        },
+        {
+            "id": "1333216",
+            "type": "flexible-asset-fields",
+            "attributes": {
+                "order": 53,
+                "name": "Prevent Medium Priority Attacks",
+                "kind": "Checkbox",
+                "hint": null,
+                "decimals": 0,
+                "tag-type": null,
+                "required": false,
+                "use-for-title": false,
+                "expiration": false,
+                "show-in-list": true,
+                "name-key": "prevent-medium-priority-attacks",
+                "created-at": "2019-02-04T20:15:39.000Z",
+                "updated-at": "2019-06-04T14:21:18.000Z",
+                "flexible-asset-type-id": 117956,
+                "default-value": ""
+            },
+            "relationships": {
+                "flexible-asset-type": {
+                    "data": {
+                        "id": "117956",
+                        "type": "flexible-asset-types"
+                    }
+                }
+            }
+        },
+        {
+            "id": "1333217",
+            "type": "flexible-asset-fields",
+            "attributes": {
+                "order": 54,
+                "name": "Detect Medium Priority Attacks",
+                "kind": "Checkbox",
+                "hint": null,
+                "decimals": 0,
+                "tag-type": null,
+                "required": false,
+                "use-for-title": false,
+                "expiration": false,
+                "show-in-list": true,
+                "name-key": "detect-medium-priority-attacks",
+                "created-at": "2019-02-04T20:15:39.000Z",
+                "updated-at": "2019-06-04T14:21:18.000Z",
+                "flexible-asset-type-id": 117956,
+                "default-value": ""
+            },
+            "relationships": {
+                "flexible-asset-type": {
+                    "data": {
+                        "id": "117956",
+                        "type": "flexible-asset-types"
+                    }
+                }
+            }
+        },
+        {
+            "id": "1333218",
+            "type": "flexible-asset-fields",
+            "attributes": {
+                "order": 55,
+                "name": "Log Medium Priority Attacks",
+                "kind": "Checkbox",
+                "hint": null,
+                "decimals": 0,
+                "tag-type": null,
+                "required": false,
+                "use-for-title": false,
+                "expiration": false,
+                "show-in-list": true,
+                "name-key": "log-medium-priority-attacks",
+                "created-at": "2019-02-04T20:15:39.000Z",
+                "updated-at": "2019-06-04T14:21:18.000Z",
+                "flexible-asset-type-id": 117956,
+                "default-value": ""
+            },
+            "relationships": {
+                "flexible-asset-type": {
+                    "data": {
+                        "id": "117956",
+                        "type": "flexible-asset-types"
+                    }
+                }
+            }
+        },
+        {
+            "id": "1333219",
+            "type": "flexible-asset-fields",
+            "attributes": {
+                "order": 56,
+                "name": "Low Priority Attacks",
+                "kind": "Header",
+                "hint": null,
+                "decimals": 0,
+                "tag-type": null,
+                "required": false,
+                "use-for-title": false,
+                "expiration": false,
+                "show-in-list": true,
+                "name-key": "low-priority-attacks",
+                "created-at": "2019-02-04T20:15:39.000Z",
+                "updated-at": "2019-06-04T14:21:18.000Z",
+                "flexible-asset-type-id": 117956,
+                "default-value": ""
+            },
+            "relationships": {
+                "flexible-asset-type": {
+                    "data": {
+                        "id": "117956",
+                        "type": "flexible-asset-types"
+                    }
+                }
+            }
+        },
+        {
+            "id": "1333220",
+            "type": "flexible-asset-fields",
+            "attributes": {
+                "order": 57,
+                "name": "Prevent Low Priority Attacks",
+                "kind": "Checkbox",
+                "hint": null,
+                "decimals": 0,
+                "tag-type": null,
+                "required": false,
+                "use-for-title": false,
+                "expiration": false,
+                "show-in-list": true,
+                "name-key": "prevent-low-priority-attacks",
+                "created-at": "2019-02-04T20:15:39.000Z",
+                "updated-at": "2019-06-04T14:21:18.000Z",
+                "flexible-asset-type-id": 117956,
+                "default-value": ""
+            },
+            "relationships": {
+                "flexible-asset-type": {
+                    "data": {
+                        "id": "117956",
+                        "type": "flexible-asset-types"
+                    }
+                }
+            }
+        },
+        {
+            "id": "1333221",
+            "type": "flexible-asset-fields",
+            "attributes": {
+                "order": 58,
+                "name": "Detect Low Priority Attacks",
+                "kind": "Checkbox",
+                "hint": null,
+                "decimals": 0,
+                "tag-type": null,
+                "required": false,
+                "use-for-title": false,
+                "expiration": false,
+                "show-in-list": true,
+                "name-key": "detect-low-priority-attacks",
+                "created-at": "2019-02-04T20:15:39.000Z",
+                "updated-at": "2019-06-04T14:21:18.000Z",
+                "flexible-asset-type-id": 117956,
+                "default-value": ""
+            },
+            "relationships": {
+                "flexible-asset-type": {
+                    "data": {
+                        "id": "117956",
+                        "type": "flexible-asset-types"
+                    }
+                }
+            }
+        },
+        {
+            "id": "1333222",
+            "type": "flexible-asset-fields",
+            "attributes": {
+                "order": 59,
+                "name": "Log Low Priority Attacks",
+                "kind": "Checkbox",
+                "hint": null,
+                "decimals": 0,
+                "tag-type": null,
+                "required": false,
+                "use-for-title": false,
+                "expiration": false,
+                "show-in-list": true,
+                "name-key": "log-low-priority-attacks",
+                "created-at": "2019-02-04T20:15:39.000Z",
+                "updated-at": "2019-06-04T14:21:18.000Z",
+                "flexible-asset-type-id": 117956,
+                "default-value": ""
+            },
+            "relationships": {
+                "flexible-asset-type": {
+                    "data": {
+                        "id": "117956",
+                        "type": "flexible-asset-types"
+                    }
+                }
+            }
+        },
+        {
+            "id": "1333236",
+            "type": "flexible-asset-fields",
+            "attributes": {
+                "order": 60,
+                "name": "App Control",
+                "kind": "Header",
+                "hint": null,
+                "decimals": 0,
+                "tag-type": null,
+                "required": false,
+                "use-for-title": false,
+                "expiration": false,
+                "show-in-list": true,
+                "name-key": "app-control",
+                "created-at": "2019-02-04T20:34:18.000Z",
+                "updated-at": "2019-06-04T14:21:18.000Z",
+                "flexible-asset-type-id": 117956,
+                "default-value": ""
+            },
+            "relationships": {
+                "flexible-asset-type": {
+                    "data": {
+                        "id": "117956",
+                        "type": "flexible-asset-types"
+                    }
+                }
+            }
+        },
+        {
+            "id": "1333237",
+            "type": "flexible-asset-fields",
+            "attributes": {
+                "order": 61,
+                "name": "App Control Enabled",
+                "kind": "Checkbox",
+                "hint": null,
+                "decimals": 0,
+                "tag-type": null,
+                "required": false,
+                "use-for-title": false,
+                "expiration": false,
+                "show-in-list": true,
+                "name-key": "app-control-enabled",
+                "created-at": "2019-02-04T20:34:18.000Z",
+                "updated-at": "2019-06-04T14:21:18.000Z",
+                "flexible-asset-type-id": 117956,
+                "default-value": ""
+            },
+            "relationships": {
+                "flexible-asset-type": {
+                    "data": {
+                        "id": "117956",
+                        "type": "flexible-asset-types"
+                    }
+                }
+            }
+        },
+        {
+            "id": "1333238",
+            "type": "flexible-asset-fields",
+            "attributes": {
+                "order": 62,
+                "name": "Tor Blocked",
+                "kind": "Checkbox",
+                "hint": null,
+                "decimals": 0,
+                "tag-type": null,
+                "required": false,
+                "use-for-title": false,
+                "expiration": false,
+                "show-in-list": true,
+                "name-key": "tor-blocked",
+                "created-at": "2019-02-04T20:34:18.000Z",
+                "updated-at": "2019-06-04T14:21:18.000Z",
+                "flexible-asset-type-id": 117956,
+                "default-value": ""
+            },
+            "relationships": {
+                "flexible-asset-type": {
+                    "data": {
+                        "id": "117956",
+                        "type": "flexible-asset-types"
+                    }
+                }
+            }
+        },
+        {
+            "id": "1368443",
+            "type": "flexible-asset-fields",
+            "attributes": {
+                "order": 63,
+                "name": "Encrypted Key Exchange Blocked",
+                "kind": "Checkbox",
+                "hint": null,
+                "decimals": 0,
+                "tag-type": null,
+                "required": false,
+                "use-for-title": false,
+                "expiration": false,
+                "show-in-list": true,
+                "name-key": "encrypted-key-exchange-blocked",
+                "created-at": "2019-03-05T14:06:09.000Z",
+                "updated-at": "2019-06-04T14:21:18.000Z",
+                "flexible-asset-type-id": 117956,
+                "default-value": ""
+            },
+            "relationships": {
+                "flexible-asset-type": {
+                    "data": {
+                        "id": "117956",
+                        "type": "flexible-asset-types"
+                    }
+                }
+            }
+        },
+        {
+            "id": "1368444",
+            "type": "flexible-asset-fields",
+            "attributes": {
+                "order": 64,
+                "name": "Encrypted Key Exchange Signature 5 Blocked",
+                "kind": "Checkbox",
+                "hint": null,
+                "decimals": 0,
+                "tag-type": null,
+                "required": false,
+                "use-for-title": false,
+                "expiration": false,
+                "show-in-list": true,
+                "name-key": "encrypted-key-exchange-signature-5-blocked",
+                "created-at": "2019-03-05T14:06:09.000Z",
+                "updated-at": "2019-06-04T14:21:18.000Z",
+                "flexible-asset-type-id": 117956,
+                "default-value": ""
+            },
+            "relationships": {
+                "flexible-asset-type": {
+                    "data": {
+                        "id": "117956",
+                        "type": "flexible-asset-types"
+                    }
+                }
+            }
+        },
+        {
+            "id": "1333239",
+            "type": "flexible-asset-fields",
+            "attributes": {
+                "order": 65,
+                "name": "Encrypted Key Exchange Signature 7 Blocked",
+                "kind": "Checkbox",
+                "hint": null,
+                "decimals": 0,
+                "tag-type": null,
+                "required": false,
+                "use-for-title": false,
+                "expiration": false,
+                "show-in-list": true,
+                "name-key": "encrypted-key-exchange-signature-7-blocked",
+                "created-at": "2019-02-04T20:34:19.000Z",
+                "updated-at": "2019-06-04T14:21:18.000Z",
+                "flexible-asset-type-id": 117956,
+                "default-value": ""
+            },
+            "relationships": {
+                "flexible-asset-type": {
+                    "data": {
+                        "id": "117956",
+                        "type": "flexible-asset-types"
+                    }
+                }
+            }
+        },
+        {
+            "id": "1333240",
+            "type": "flexible-asset-fields",
+            "attributes": {
+                "order": 66,
+                "name": "RealTime Black List",
+                "kind": "Header",
+                "hint": null,
+                "decimals": 0,
+                "tag-type": null,
+                "required": false,
+                "use-for-title": false,
+                "expiration": false,
+                "show-in-list": true,
+                "name-key": "realtime-black-list",
+                "created-at": "2019-02-04T20:34:19.000Z",
+                "updated-at": "2019-06-04T14:21:18.000Z",
+                "flexible-asset-type-id": 117956,
+                "default-value": ""
+            },
+            "relationships": {
+                "flexible-asset-type": {
+                    "data": {
+                        "id": "117956",
+                        "type": "flexible-asset-types"
+                    }
+                }
+            }
+        },
+        {
+            "id": "1333241",
+            "type": "flexible-asset-fields",
+            "attributes": {
+                "order": 67,
+                "name": "RealTime Black List Enabled",
+                "kind": "Checkbox",
+                "hint": null,
+                "decimals": 0,
+                "tag-type": null,
+                "required": false,
+                "use-for-title": false,
+                "expiration": false,
+                "show-in-list": true,
+                "name-key": "realtime-black-list-enabled",
+                "created-at": "2019-02-04T20:34:19.000Z",
+                "updated-at": "2019-06-04T14:21:18.000Z",
+                "flexible-asset-type-id": 117956,
+                "default-value": ""
+            },
+            "relationships": {
+                "flexible-asset-type": {
+                    "data": {
+                        "id": "117956",
+                        "type": "flexible-asset-types"
+                    }
+                }
+            }
+        },
+        {
+            "id": "1333242",
+            "type": "flexible-asset-fields",
+            "attributes": {
+                "order": 68,
+                "name": "BotNet Filter",
+                "kind": "Header",
+                "hint": null,
+                "decimals": 0,
+                "tag-type": null,
+                "required": false,
+                "use-for-title": false,
+                "expiration": false,
+                "show-in-list": true,
+                "name-key": "botnet-filter",
+                "created-at": "2019-02-04T20:34:19.000Z",
+                "updated-at": "2019-06-04T14:21:18.000Z",
+                "flexible-asset-type-id": 117956,
+                "default-value": ""
+            },
+            "relationships": {
+                "flexible-asset-type": {
+                    "data": {
+                        "id": "117956",
+                        "type": "flexible-asset-types"
+                    }
+                }
+            }
+        },
+        {
+            "id": "1333243",
+            "type": "flexible-asset-fields",
+            "attributes": {
+                "order": 69,
+                "name": "BotNet Filter Enabled",
+                "kind": "Checkbox",
+                "hint": null,
+                "decimals": 0,
+                "tag-type": null,
+                "required": false,
+                "use-for-title": false,
+                "expiration": false,
+                "show-in-list": true,
+                "name-key": "botnet-filter-enabled",
+                "created-at": "2019-02-04T20:34:19.000Z",
+                "updated-at": "2019-06-04T14:21:18.000Z",
+                "flexible-asset-type-id": 117956,
+                "default-value": ""
+            },
+            "relationships": {
+                "flexible-asset-type": {
+                    "data": {
+                        "id": "117956",
+                        "type": "flexible-asset-types"
+                    }
+                }
+            }
+        },
+        {
+            "id": "1368520",
+            "type": "flexible-asset-fields",
+            "attributes": {
+                "order": 70,
+                "name": "Anti-Spyware",
+                "kind": "Header",
+                "hint": null,
+                "decimals": 0,
+                "tag-type": null,
+                "required": false,
+                "use-for-title": false,
+                "expiration": false,
+                "show-in-list": true,
+                "name-key": "anti-spyware",
+                "created-at": "2019-03-05T15:28:31.000Z",
+                "updated-at": "2019-06-04T14:21:18.000Z",
+                "flexible-asset-type-id": 117956,
+                "default-value": ""
+            },
+            "relationships": {
+                "flexible-asset-type": {
+                    "data": {
+                        "id": "117956",
+                        "type": "flexible-asset-types"
+                    }
+                }
+            }
+        },
+        {
+            "id": "1368521",
+            "type": "flexible-asset-fields",
+            "attributes": {
+                "order": 71,
+                "name": "Anti-Spyware Enabled",
+                "kind": "Checkbox",
+                "hint": null,
+                "decimals": 0,
+                "tag-type": null,
+                "required": false,
+                "use-for-title": false,
+                "expiration": false,
+                "show-in-list": true,
+                "name-key": "anti-spyware-enabled",
+                "created-at": "2019-03-05T15:28:31.000Z",
+                "updated-at": "2019-06-04T14:21:18.000Z",
+                "flexible-asset-type-id": 117956,
+                "default-value": ""
+            },
+            "relationships": {
+                "flexible-asset-type": {
+                    "data": {
+                        "id": "117956",
+                        "type": "flexible-asset-types"
+                    }
+                }
+            }
+        },
+        {
+            "id": "1368522",
+            "type": "flexible-asset-fields",
+            "attributes": {
+                "order": 72,
+                "name": "High Danger Spyware",
+                "kind": "Header",
+                "hint": null,
+                "decimals": 0,
+                "tag-type": null,
+                "required": false,
+                "use-for-title": false,
+                "expiration": false,
+                "show-in-list": true,
+                "name-key": "high-danger-spyware",
+                "created-at": "2019-03-05T15:28:31.000Z",
+                "updated-at": "2019-06-04T14:21:18.000Z",
+                "flexible-asset-type-id": 117956,
+                "default-value": ""
+            },
+            "relationships": {
+                "flexible-asset-type": {
+                    "data": {
+                        "id": "117956",
+                        "type": "flexible-asset-types"
+                    }
+                }
+            }
+        },
+        {
+            "id": "1368523",
+            "type": "flexible-asset-fields",
+            "attributes": {
+                "order": 73,
+                "name": "Prevent High Danger Spyware",
+                "kind": "Checkbox",
+                "hint": null,
+                "decimals": 0,
+                "tag-type": null,
+                "required": false,
+                "use-for-title": false,
+                "expiration": false,
+                "show-in-list": true,
+                "name-key": "prevent-high-danger-spyware",
+                "created-at": "2019-03-05T15:28:31.000Z",
+                "updated-at": "2019-06-04T14:21:18.000Z",
+                "flexible-asset-type-id": 117956,
+                "default-value": ""
+            },
+            "relationships": {
+                "flexible-asset-type": {
+                    "data": {
+                        "id": "117956",
+                        "type": "flexible-asset-types"
+                    }
+                }
+            }
+        },
+        {
+            "id": "1368524",
+            "type": "flexible-asset-fields",
+            "attributes": {
+                "order": 74,
+                "name": "Detect High Danger Spyware",
+                "kind": "Checkbox",
+                "hint": null,
+                "decimals": 0,
+                "tag-type": null,
+                "required": false,
+                "use-for-title": false,
+                "expiration": false,
+                "show-in-list": true,
+                "name-key": "detect-high-danger-spyware",
+                "created-at": "2019-03-05T15:28:32.000Z",
+                "updated-at": "2019-06-04T14:21:18.000Z",
+                "flexible-asset-type-id": 117956,
+                "default-value": ""
+            },
+            "relationships": {
+                "flexible-asset-type": {
+                    "data": {
+                        "id": "117956",
+                        "type": "flexible-asset-types"
+                    }
+                }
+            }
+        },
+        {
+            "id": "1368525",
+            "type": "flexible-asset-fields",
+            "attributes": {
+                "order": 75,
+                "name": "Log High Danger Spyware",
+                "kind": "Checkbox",
+                "hint": null,
+                "decimals": 0,
+                "tag-type": null,
+                "required": false,
+                "use-for-title": false,
+                "expiration": false,
+                "show-in-list": true,
+                "name-key": "log-high-danger-spyware",
+                "created-at": "2019-03-05T15:28:32.000Z",
+                "updated-at": "2019-06-04T14:21:18.000Z",
+                "flexible-asset-type-id": 117956,
+                "default-value": ""
+            },
+            "relationships": {
+                "flexible-asset-type": {
+                    "data": {
+                        "id": "117956",
+                        "type": "flexible-asset-types"
+                    }
+                }
+            }
+        },
+        {
+            "id": "1368526",
+            "type": "flexible-asset-fields",
+            "attributes": {
+                "order": 76,
+                "name": "Medium Danger Spyware",
+                "kind": "Header",
+                "hint": null,
+                "decimals": 0,
+                "tag-type": null,
+                "required": false,
+                "use-for-title": false,
+                "expiration": false,
+                "show-in-list": true,
+                "name-key": "medium-danger-spyware",
+                "created-at": "2019-03-05T15:28:32.000Z",
+                "updated-at": "2019-06-04T14:21:18.000Z",
+                "flexible-asset-type-id": 117956,
+                "default-value": ""
+            },
+            "relationships": {
+                "flexible-asset-type": {
+                    "data": {
+                        "id": "117956",
+                        "type": "flexible-asset-types"
+                    }
+                }
+            }
+        },
+        {
+            "id": "1368527",
+            "type": "flexible-asset-fields",
+            "attributes": {
+                "order": 77,
+                "name": "Prevent Medium Danger Spyware",
+                "kind": "Checkbox",
+                "hint": null,
+                "decimals": 0,
+                "tag-type": null,
+                "required": false,
+                "use-for-title": false,
+                "expiration": false,
+                "show-in-list": true,
+                "name-key": "prevent-medium-danger-spyware",
+                "created-at": "2019-03-05T15:28:32.000Z",
+                "updated-at": "2019-06-04T14:21:18.000Z",
+                "flexible-asset-type-id": 117956,
+                "default-value": ""
+            },
+            "relationships": {
+                "flexible-asset-type": {
+                    "data": {
+                        "id": "117956",
+                        "type": "flexible-asset-types"
+                    }
+                }
+            }
+        },
+        {
+            "id": "1368528",
+            "type": "flexible-asset-fields",
+            "attributes": {
+                "order": 78,
+                "name": "Detect Medium Danger Spyware",
+                "kind": "Checkbox",
+                "hint": null,
+                "decimals": 0,
+                "tag-type": null,
+                "required": false,
+                "use-for-title": false,
+                "expiration": false,
+                "show-in-list": true,
+                "name-key": "detect-medium-danger-spyware",
+                "created-at": "2019-03-05T15:28:32.000Z",
+                "updated-at": "2019-06-04T14:21:18.000Z",
+                "flexible-asset-type-id": 117956,
+                "default-value": ""
+            },
+            "relationships": {
+                "flexible-asset-type": {
+                    "data": {
+                        "id": "117956",
+                        "type": "flexible-asset-types"
+                    }
+                }
+            }
+        },
+        {
+            "id": "1368529",
+            "type": "flexible-asset-fields",
+            "attributes": {
+                "order": 79,
+                "name": "Log Medium Danger Spyware",
+                "kind": "Checkbox",
+                "hint": null,
+                "decimals": 0,
+                "tag-type": null,
+                "required": false,
+                "use-for-title": false,
+                "expiration": false,
+                "show-in-list": true,
+                "name-key": "log-medium-danger-spyware",
+                "created-at": "2019-03-05T15:28:32.000Z",
+                "updated-at": "2019-06-04T14:21:18.000Z",
+                "flexible-asset-type-id": 117956,
+                "default-value": ""
+            },
+            "relationships": {
+                "flexible-asset-type": {
+                    "data": {
+                        "id": "117956",
+                        "type": "flexible-asset-types"
+                    }
+                }
+            }
+        },
+        {
+            "id": "1368530",
+            "type": "flexible-asset-fields",
+            "attributes": {
+                "order": 80,
+                "name": "Low Danger Spyware",
+                "kind": "Header",
+                "hint": null,
+                "decimals": 0,
+                "tag-type": null,
+                "required": false,
+                "use-for-title": false,
+                "expiration": false,
+                "show-in-list": true,
+                "name-key": "low-danger-spyware",
+                "created-at": "2019-03-05T15:28:32.000Z",
+                "updated-at": "2019-06-04T14:21:18.000Z",
+                "flexible-asset-type-id": 117956,
+                "default-value": ""
+            },
+            "relationships": {
+                "flexible-asset-type": {
+                    "data": {
+                        "id": "117956",
+                        "type": "flexible-asset-types"
+                    }
+                }
+            }
+        },
+        {
+            "id": "1368531",
+            "type": "flexible-asset-fields",
+            "attributes": {
+                "order": 81,
+                "name": "Prevent Low Danger Spyware",
+                "kind": "Checkbox",
+                "hint": null,
+                "decimals": 0,
+                "tag-type": null,
+                "required": false,
+                "use-for-title": false,
+                "expiration": false,
+                "show-in-list": true,
+                "name-key": "prevent-low-danger-spyware",
+                "created-at": "2019-03-05T15:28:32.000Z",
+                "updated-at": "2019-06-04T14:21:18.000Z",
+                "flexible-asset-type-id": 117956,
+                "default-value": ""
+            },
+            "relationships": {
+                "flexible-asset-type": {
+                    "data": {
+                        "id": "117956",
+                        "type": "flexible-asset-types"
+                    }
+                }
+            }
+        },
+        {
+            "id": "1368532",
+            "type": "flexible-asset-fields",
+            "attributes": {
+                "order": 82,
+                "name": "Detect Low Danger Spyware",
+                "kind": "Checkbox",
+                "hint": null,
+                "decimals": 0,
+                "tag-type": null,
+                "required": false,
+                "use-for-title": false,
+                "expiration": false,
+                "show-in-list": true,
+                "name-key": "detect-low-danger-spyware",
+                "created-at": "2019-03-05T15:28:32.000Z",
+                "updated-at": "2019-06-04T14:21:18.000Z",
+                "flexible-asset-type-id": 117956,
+                "default-value": ""
+            },
+            "relationships": {
+                "flexible-asset-type": {
+                    "data": {
+                        "id": "117956",
+                        "type": "flexible-asset-types"
+                    }
+                }
+            }
+        },
+        {
+            "id": "1368533",
+            "type": "flexible-asset-fields",
+            "attributes": {
+                "order": 83,
+                "name": "Log Low Danger Spyware",
+                "kind": "Checkbox",
+                "hint": null,
+                "decimals": 0,
+                "tag-type": null,
+                "required": false,
+                "use-for-title": false,
+                "expiration": false,
+                "show-in-list": true,
+                "name-key": "log-low-danger-spyware",
+                "created-at": "2019-03-05T15:28:32.000Z",
+                "updated-at": "2019-06-04T14:21:18.000Z",
+                "flexible-asset-type-id": 117956,
+                "default-value": ""
+            },
+            "relationships": {
+                "flexible-asset-type": {
+                    "data": {
+                        "id": "117956",
+                        "type": "flexible-asset-types"
+                    }
+                }
+            }
+        },
+        {
+            "id": "1333244",
+            "type": "flexible-asset-fields",
+            "attributes": {
+                "order": 84,
+                "name": "Geo-IP Filtering",
+                "kind": "Header",
+                "hint": null,
+                "decimals": 0,
+                "tag-type": null,
+                "required": false,
+                "use-for-title": false,
+                "expiration": false,
+                "show-in-list": true,
+                "name-key": "geo-ip-filtering",
+                "created-at": "2019-02-04T20:34:19.000Z",
+                "updated-at": "2019-06-04T14:21:18.000Z",
+                "flexible-asset-type-id": 117956,
+                "default-value": ""
+            },
+            "relationships": {
+                "flexible-asset-type": {
+                    "data": {
+                        "id": "117956",
+                        "type": "flexible-asset-types"
+                    }
+                }
+            }
+        },
+        {
+            "id": "1333245",
+            "type": "flexible-asset-fields",
+            "attributes": {
+                "order": 85,
+                "name": "Geo-IP Filtering Enabled",
+                "kind": "Checkbox",
+                "hint": null,
+                "decimals": 0,
+                "tag-type": null,
+                "required": false,
+                "use-for-title": false,
+                "expiration": false,
+                "show-in-list": true,
+                "name-key": "geo-ip-filtering-enabled",
+                "created-at": "2019-02-04T20:34:19.000Z",
+                "updated-at": "2019-06-04T14:21:18.000Z",
+                "flexible-asset-type-id": 117956,
+                "default-value": ""
+            },
+            "relationships": {
+                "flexible-asset-type": {
+                    "data": {
+                        "id": "117956",
+                        "type": "flexible-asset-types"
+                    }
+                }
+            }
+        },
+        {
+            "id": "1333246",
+            "type": "flexible-asset-fields",
+            "attributes": {
+                "order": 86,
+                "name": "Allowed Countries",
+                "kind": "Textbox",
+                "hint": null,
+                "decimals": 0,
+                "tag-type": null,
+                "required": false,
+                "use-for-title": false,
+                "expiration": false,
+                "show-in-list": true,
+                "name-key": "allowed-countries",
+                "created-at": "2019-02-04T20:34:19.000Z",
+                "updated-at": "2019-06-04T14:21:18.000Z",
+                "flexible-asset-type-id": 117956,
+                "default-value": ""
+            },
+            "relationships": {
+                "flexible-asset-type": {
+                    "data": {
+                        "id": "117956",
+                        "type": "flexible-asset-types"
+                    }
+                }
+            }
+        },
+        {
+            "id": "1333247",
+            "type": "flexible-asset-fields",
+            "attributes": {
+                "order": 87,
+                "name": "Blocked Countries",
+                "kind": "Textbox",
+                "hint": null,
+                "decimals": 0,
+                "tag-type": null,
+                "required": false,
+                "use-for-title": false,
+                "expiration": false,
+                "show-in-list": true,
+                "name-key": "blocked-countries",
+                "created-at": "2019-02-04T20:34:19.000Z",
+                "updated-at": "2019-06-04T14:21:18.000Z",
+                "flexible-asset-type-id": 117956,
+                "default-value": ""
+            },
+            "relationships": {
+                "flexible-asset-type": {
+                    "data": {
+                        "id": "117956",
+                        "type": "flexible-asset-types"
+                    }
+                }
+            }
+        }
+    ],
+    "meta": {
+        "current-page": 1,
+        "next-page": null,
+        "prev-page": null,
+        "total-pages": 1,
+        "total-count": 87,
+        "filters": {}
+    },
+    "links": {}
+}

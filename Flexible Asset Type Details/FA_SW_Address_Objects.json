@@ -1,0 +1,187 @@
+{
+    "data": [
+        {
+            "id": "1429472",
+            "type": "flexible-asset-fields",
+            "attributes": {
+                "order": 1,
+                "name": "SonicWALL",
+                "kind": "Tag",
+                "hint": null,
+                "decimals": 0,
+                "tag-type": "Configurations",
+                "required": false,
+                "use-for-title": false,
+                "expiration": false,
+                "show-in-list": true,
+                "name-key": "sonicwall",
+                "created-at": "2019-04-09T18:19:31.000Z",
+                "updated-at": "2019-04-09T18:19:31.000Z",
+                "flexible-asset-type-id": 124964,
+                "default-value": null
+            },
+            "relationships": {
+                "flexible-asset-type": {
+                    "data": {
+                        "id": "124964",
+                        "type": "flexible-asset-types"
+                    }
+                }
+            }
+        },
+        {
+            "id": "1428211",
+            "type": "flexible-asset-fields",
+            "attributes": {
+                "order": 2,
+                "name": "Address Object Name",
+                "kind": "Text",
+                "hint": null,
+                "decimals": 0,
+                "tag-type": null,
+                "required": false,
+                "use-for-title": true,
+                "expiration": false,
+                "show-in-list": true,
+                "name-key": "address-object-name",
+                "created-at": "2019-04-09T14:44:23.000Z",
+                "updated-at": "2019-04-09T18:19:31.000Z",
+                "flexible-asset-type-id": 124964,
+                "default-value": null
+            },
+            "relationships": {
+                "flexible-asset-type": {
+                    "data": {
+                        "id": "124964",
+                        "type": "flexible-asset-types"
+                    }
+                }
+            }
+        },
+        {
+            "id": "1428212",
+            "type": "flexible-asset-fields",
+            "attributes": {
+                "order": 3,
+                "name": "UUID",
+                "kind": "Text",
+                "hint": null,
+                "decimals": 0,
+                "tag-type": null,
+                "required": false,
+                "use-for-title": false,
+                "expiration": false,
+                "show-in-list": true,
+                "name-key": "uuid",
+                "created-at": "2019-04-09T14:44:23.000Z",
+                "updated-at": "2019-04-09T18:19:31.000Z",
+                "flexible-asset-type-id": 124964,
+                "default-value": null
+            },
+            "relationships": {
+                "flexible-asset-type": {
+                    "data": {
+                        "id": "124964",
+                        "type": "flexible-asset-types"
+                    }
+                }
+            }
+        },
+        {
+            "id": "1428213",
+            "type": "flexible-asset-fields",
+            "attributes": {
+                "order": 4,
+                "name": "Zone",
+                "kind": "Text",
+                "hint": null,
+                "decimals": 0,
+                "tag-type": null,
+                "required": false,
+                "use-for-title": false,
+                "expiration": false,
+                "show-in-list": true,
+                "name-key": "zone",
+                "created-at": "2019-04-09T14:44:23.000Z",
+                "updated-at": "2019-04-09T18:19:31.000Z",
+                "flexible-asset-type-id": 124964,
+                "default-value": null
+            },
+            "relationships": {
+                "flexible-asset-type": {
+                    "data": {
+                        "id": "124964",
+                        "type": "flexible-asset-types"
+                    }
+                }
+            }
+        },
+        {
+            "id": "1428214",
+            "type": "flexible-asset-fields",
+            "attributes": {
+                "order": 5,
+                "name": "Object Type",
+                "kind": "Select",
+                "hint": null,
+                "decimals": 0,
+                "tag-type": null,
+                "required": false,
+                "use-for-title": false,
+                "expiration": false,
+                "show-in-list": true,
+                "name-key": "object-type",
+                "created-at": "2019-04-09T14:44:23.000Z",
+                "updated-at": "2019-04-09T18:19:31.000Z",
+                "flexible-asset-type-id": 124964,
+                "default-value": "Network\nHost\nFQDN\nRange\nMAC"
+            },
+            "relationships": {
+                "flexible-asset-type": {
+                    "data": {
+                        "id": "124964",
+                        "type": "flexible-asset-types"
+                    }
+                }
+            }
+        },
+        {
+            "id": "1428215",
+            "type": "flexible-asset-fields",
+            "attributes": {
+                "order": 6,
+                "name": "Object Value",
+                "kind": "Text",
+                "hint": null,
+                "decimals": 0,
+                "tag-type": null,
+                "required": false,
+                "use-for-title": false,
+                "expiration": false,
+                "show-in-list": true,
+                "name-key": "object-value",
+                "created-at": "2019-04-09T14:44:23.000Z",
+                "updated-at": "2019-04-09T18:19:31.000Z",
+                "flexible-asset-type-id": 124964,
+                "default-value": null
+            },
+            "relationships": {
+                "flexible-asset-type": {
+                    "data": {
+                        "id": "124964",
+                        "type": "flexible-asset-types"
+                    }
+                }
+            }
+        }
+    ],
+    "meta": {
+        "current-page": 1,
+        "next-page": null,
+        "prev-page": null,
+        "total-pages": 1,
+        "total-count": 6,
+        "filters": {}
+    },
+    "links": {}
+}
