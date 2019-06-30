@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="CkL-AP-jHF">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--IT Glue Contacts-->
+        <scene sceneID="KmG-WM-oaj">
+            <objects>
+                <viewController id="3gA-sZ-u8n" customClass="ContactsViewController" customModule="ITGlueContacts" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="J6R-Yz-pRL">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="798-bz-waG">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="3gA-sZ-u8n" id="8co-nZ-7j1"/>
+                                    <outlet property="delegate" destination="3gA-sZ-u8n" id="QNS-J6-AKe"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="798-bz-waG" firstAttribute="top" secondItem="YIV-HQ-dJG" secondAttribute="top" id="CD4-zR-aoU"/>
+                            <constraint firstItem="798-bz-waG" firstAttribute="leading" secondItem="YIV-HQ-dJG" secondAttribute="leading" id="Egm-fL-T3C"/>
+                            <constraint firstItem="YIV-HQ-dJG" firstAttribute="trailing" secondItem="798-bz-waG" secondAttribute="trailing" id="Fcw-QR-Igy"/>
+                            <constraint firstItem="YIV-HQ-dJG" firstAttribute="bottom" secondItem="798-bz-waG" secondAttribute="bottom" id="hOF-bq-VQe"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="YIV-HQ-dJG"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="IT Glue Contacts" id="17A-Rq-Z83">
+                        <barButtonItem key="rightBarButtonItem" title="Settings" id="59m-Cf-cem">
+                            <connections>
+                                <segue destination="6RF-Na-Le7" kind="show" id="jui-nS-BD3"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="settingsButton" destination="59m-Cf-cem" id="hUV-1v-dUr"/>
+                        <outlet property="tableView" destination="798-bz-waG" id="se6-e7-teJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fS4-Th-ixz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2675.36231884058" y="-208.25892857142856"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="fVX-bZ-hKB">
+            <objects>
+                <tableViewController title="Settings" id="6RF-Na-Le7" customClass="SettingsViewController" customModule="ITGlueContacts" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="ofz-QR-c9q">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <sections>
+                            <tableViewSection headerTitle="Data" footerTitle="Last sync: Jun 25, 2019 at 1:50 PM" id="crk-rr-gbm">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="PDe-Hx-zkn">
+                                        <rect key="frame" x="0.0" y="55.5" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="PDe-Hx-zkn" id="2vd-GU-LXb">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LuT-2m-BpI">
+                                                    <rect key="frame" x="20" y="11" width="374" height="22"/>
+                                                    <state key="normal" title="Update Contacts Now"/>
+                                                    <connections>
+                                                        <action selector="didTapUpdateContactsNowButton:" destination="6RF-Na-Le7" eventType="touchUpInside" id="z6d-kO-FF9"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="LuT-2m-BpI" firstAttribute="top" secondItem="2vd-GU-LXb" secondAttribute="topMargin" id="Atf-CG-8EK"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="LuT-2m-BpI" secondAttribute="bottom" id="Eh3-Rg-6YZ"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="LuT-2m-BpI" secondAttribute="trailing" id="W4G-gF-7jb"/>
+                                                <constraint firstItem="LuT-2m-BpI" firstAttribute="leading" secondItem="2vd-GU-LXb" secondAttribute="leadingMargin" id="jCj-0M-qeO"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="IT Glue API" footerTitle="IT Glue administrators maintain API keys under: Account &gt; Settings &gt; API Keys." id="TQj-Va-bW9">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="AJw-jk-wBQ">
+                                        <rect key="frame" x="0.0" y="175" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="AJw-jk-wBQ" id="s7r-Qv-77W">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Connect to European Union Endpoint" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rIZ-va-7ZR">
+                                                    <rect key="frame" x="20" y="11" width="325" height="22"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="yVw-kN-VoR">
+                                                    <rect key="frame" x="345" y="11" width="51" height="22"/>
+                                                    <connections>
+                                                        <action selector="didToggleConnectToEuropeanUnionEndpointSwitch:" destination="6RF-Na-Le7" eventType="valueChanged" id="75F-BQ-ONU"/>
+                                                    </connections>
+                                                </switch>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="rIZ-va-7ZR" firstAttribute="top" secondItem="s7r-Qv-77W" secondAttribute="topMargin" id="0ze-fR-4ke"/>
+                                                <constraint firstItem="rIZ-va-7ZR" firstAttribute="leading" secondItem="s7r-Qv-77W" secondAttribute="leadingMargin" id="4t3-FO-2f6"/>
+                                                <constraint firstItem="yVw-kN-VoR" firstAttribute="top" secondItem="s7r-Qv-77W" secondAttribute="topMargin" id="bKT-Bg-gI0"/>
+                                                <constraint firstItem="yVw-kN-VoR" firstAttribute="leading" secondItem="rIZ-va-7ZR" secondAttribute="trailing" id="c2W-fm-dtT"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="yVw-kN-VoR" secondAttribute="trailing" id="ffC-lV-LtK"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="yVw-kN-VoR" secondAttribute="bottom" id="gvo-0x-O1Y"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="rIZ-va-7ZR" secondAttribute="bottom" id="h42-Ys-fKl"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="EkS-od-VIO">
+                                        <rect key="frame" x="0.0" y="219" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="EkS-od-VIO" id="aIB-MW-WQs">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="105-Jm-NZ9">
+                                                    <rect key="frame" x="20" y="11" width="374" height="22"/>
+                                                    <state key="normal" title="Update IT Glue API Key"/>
+                                                    <connections>
+                                                        <action selector="didTapUpdateITGlueAPIKeyButton:" destination="6RF-Na-Le7" eventType="touchUpInside" id="xr3-pp-W3t"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="105-Jm-NZ9" firstAttribute="top" secondItem="aIB-MW-WQs" secondAttribute="topMargin" id="GW5-oZ-HSk"/>
+                                                <constraint firstItem="105-Jm-NZ9" firstAttribute="leading" secondItem="aIB-MW-WQs" secondAttribute="leadingMargin" id="SGK-5U-ok1"/>
+                                                <constraint firstItem="105-Jm-NZ9" firstAttribute="bottom" secondItem="aIB-MW-WQs" secondAttribute="bottomMargin" id="aXC-pi-vgq"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="105-Jm-NZ9" secondAttribute="trailing" id="u5z-HG-1Rz"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Apple Contacts" id="0ex-Bu-Rml">
+                                <string key="footerTitle">Import is one-way, from IT Glue Contacts into Apple Contacts. Existing contacts with matching names will have additional IT Glue information added. New contacts are added to the specified account in:  Settings &gt; Contacts &gt; Default Account.</string>
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="7UU-Ja-q7j">
+                                        <rect key="frame" x="0.0" y="354.5" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7UU-Ja-q7j" id="hwq-GT-12f">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AjD-fS-ZaB">
+                                                    <rect key="frame" x="20" y="11" width="374" height="22"/>
+                                                    <state key="normal" title="Import IT Glue Contacts into Apple Contacts"/>
+                                                    <connections>
+                                                        <action selector="didTapImportITGlueContactsIntoAppleContactsButton:" destination="6RF-Na-Le7" eventType="touchUpInside" id="wgr-2g-D7l"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="AjD-fS-ZaB" firstAttribute="top" secondItem="hwq-GT-12f" secondAttribute="topMargin" id="0kK-DU-gkd"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="AjD-fS-ZaB" secondAttribute="trailing" id="GIJ-jV-vzb"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="AjD-fS-ZaB" secondAttribute="bottom" id="Wv6-jP-G28"/>
+                                                <constraint firstItem="AjD-fS-ZaB" firstAttribute="leading" secondItem="hwq-GT-12f" secondAttribute="leadingMargin" id="md7-wP-EN3"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="6RF-Na-Le7" id="zdu-xt-VLD"/>
+                            <outlet property="delegate" destination="6RF-Na-Le7" id="AeE-nj-gXv"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="connectToEuropeanUnionEndpointSwitch" destination="yVw-kN-VoR" id="veA-hE-USC"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="H18-5c-tkz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3600.0000000000005" y="-205.58035714285714"/>
+        </scene>
+        <!--Welcome View Controller-->
+        <scene sceneID="Gsv-Pg-4n3">
+            <objects>
+                <viewController storyboardIdentifier="WelcomeViewController" id="3Sj-08-uLb" customClass="WelcomeViewController" customModule="ITGlueContacts" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="R2S-YO-eNf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="44" translatesAutoresizingMaskIntoConstraints="NO" id="7kW-sU-ZdB">
+                                <rect key="frame" x="20" y="44" width="374" height="518"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="0yf-j0-qUu">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="76"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to IT Glue Contacts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.29999999999999999" translatesAutoresizingMaskIntoConstraints="NO" id="Z39-Uz-Kle">
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="36"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To obtain IT Glue contacts this app requires an IT Glue API key. Please follow the steps below:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.29999999999999999" translatesAutoresizingMaskIntoConstraints="NO" id="7Bb-uP-Ay8">
+                                                <rect key="frame" x="0.0" y="38" width="374" height="38"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="alw-9j-c6R">
+                                        <rect key="frame" x="0.0" y="120" width="374" height="76"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Step 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.29999999999999999" translatesAutoresizingMaskIntoConstraints="NO" id="2oX-fa-tPG">
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="31.5"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="With an Administrator account log in to IT Glue and browse to Account &gt; Settings &gt; API Keys." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.29999999999999999" translatesAutoresizingMaskIntoConstraints="NO" id="El2-lM-aaB">
+                                                <rect key="frame" x="0.0" y="33.5" width="374" height="42.5"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="oBo-1J-Fyg">
+                                        <rect key="frame" x="0.0" y="240" width="374" height="98"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Step 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.29999999999999999" translatesAutoresizingMaskIntoConstraints="NO" id="neB-Z4-lZK">
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="31.5"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Click the + button to create a new API key. Enter &quot;IT Glue Contacts&quot; as the name and click Generate API Key." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumScaleFactor="0.29999999999999999" translatesAutoresizingMaskIntoConstraints="NO" id="n8W-yo-jgI">
+                                                <rect key="frame" x="0.0" y="33.5" width="374" height="64.5"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="ZY6-dh-oaf">
+                                        <rect key="frame" x="0.0" y="382" width="374" height="136"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Step 3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.29999999999999999" translatesAutoresizingMaskIntoConstraints="NO" id="17F-pu-xk2">
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="31.5"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Copy and paste the API key into the field below." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.29999999999999999" translatesAutoresizingMaskIntoConstraints="NO" id="52e-ce-OdO">
+                                                <rect key="frame" x="0.0" y="33.5" width="374" height="20.5"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Paste in your IT Glue API key" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="l0a-O0-gDY">
+                                                <rect key="frame" x="0.0" y="56" width="374" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="editingChangedITGlueAPIKeyTextField:" destination="3Sj-08-uLb" eventType="editingChanged" id="iM3-MU-Ce7"/>
+                                                </connections>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W6C-pw-NJT">
+                                                <rect key="frame" x="0.0" y="88" width="374" height="48"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                                <state key="normal" title="Continue"/>
+                                                <connections>
+                                                    <segue destination="CkL-AP-jHF" kind="show" id="wpj-Yo-cNv"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="7kW-sU-ZdB" firstAttribute="top" secondItem="R2S-YO-eNf" secondAttribute="topMargin" id="8P7-0b-UzM"/>
+                            <constraint firstItem="7kW-sU-ZdB" firstAttribute="leading" secondItem="R2S-YO-eNf" secondAttribute="leadingMargin" id="AxN-D9-BUu"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="7kW-sU-ZdB" secondAttribute="trailing" id="B3x-wd-86H"/>
+                            <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="7kW-sU-ZdB" secondAttribute="bottom" id="idp-jC-rjd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="eSI-6H-Gpj"/>
+                    </view>
+                    <connections>
+                        <outlet property="continueButton" destination="W6C-pw-NJT" id="TsL-Xu-iYj"/>
+                        <outlet property="itGlueAPIKeyTextField" destination="l0a-O0-gDY" id="mBx-14-pky"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Evu-f9-yT4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="863.768115942029" y="-208.25892857142856"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="w1h-1Y-tj3">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="CkL-AP-jHF" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zlF-pp-Ggf">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="3gA-sZ-u8n" kind="relationship" relationship="rootViewController" id="RmU-bV-s8a"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Kr-eo-nO5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1765.217391304348" y="-208.25892857142856"/>
+        </scene>
+    </scenes>
+</document>
