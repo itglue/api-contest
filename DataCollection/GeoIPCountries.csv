@@ -1,0 +1,254 @@
+﻿CountryName,Allowed
+"""Anonymous Proxy""",No
+"""Satellite Provider""",No
+Andorra,No
+"""United Arab Emirates""",No
+Afghanistan,No
+"""Antigua and Barbuda""",No
+Anguilla,No
+Albania,No
+Armenia,No
+"""Netherlands Antilles""",No
+Angola,No
+"""Asia/Pacific Region""",No
+Antarctica,No
+Argentina,No
+"""American Samoa""",No
+Austria,No
+Australia,Yes
+Aruba,No
+"""Aland Islands""",No
+Azerbaijan,No
+"""Bosnia and Herzegovina""",No
+Barbados,No
+Bangladesh,No
+Belgium,No
+"""Burkina Faso""",No
+Bulgaria,No
+Bahrain,No
+Burundi,No
+Benin,No
+Bermuda,No
+"""Brunei Darussalam""",No
+Bolivia,No
+Brazil,No
+Bahamas,No
+Bhutan,No
+"""Bouvet Island""",No
+Botswana,No
+Belarus,No
+Belize,No
+Canada,Yes
+"""Cocos (Keeling) Islands""",No
+"""Congo, The Democratic Republic of the""",No
+"""Central African Republic""",No
+Congo,No
+Switzerland,Yes
+"""Cote d'Ivoire""",No
+"""Cook Islands""",No
+Chile,No
+Cameroon,No
+China,No
+Colombia,No
+"""Costa Rica""",No
+Cuba,No
+"""Cape Verde""",No
+"""Christmas Island""",No
+Cyprus,No
+"""Czech Republic""",No
+Germany,Yes
+Djibouti,No
+Denmark,No
+Dominica,No
+"""Dominican Republic""",No
+Algeria,No
+Ecuador,No
+Estonia,No
+Egypt,No
+"""Western Sahara""",No
+Eritrea,No
+Spain,No
+Ethiopia,No
+Europe,Yes
+Finland,No
+Fiji,No
+"""Falkland Islands (Malvinas)""",No
+"""Micronesia, Federated States of""",No
+"""Faroe Islands""",No
+France,No
+Gabon,No
+"""United Kingdom""",Yes
+Grenada,No
+Georgia,No
+"""French Guiana""",No
+Guernsey,No
+Ghana,No
+Gibraltar,No
+Greenland,No
+Gambia,No
+Guinea,No
+Guadeloupe,No
+"""Equatorial Guinea""",No
+Greece,No
+"""South Georgia and the South Sandwich Islands""",No
+Guatemala,No
+Guam,No
+Guinea-Bissau,No
+Guyana,No
+"""Hong Kong""",No
+"""Heard Island and McDonald Islands""",No
+Honduras,No
+Croatia,No
+Haiti,No
+Hungary,No
+Indonesia,No
+Ireland,Yes
+Israel,No
+"""Isle of Man""",No
+India,No
+"""British Indian Ocean Territory""",No
+Iraq,No
+"""Iran, Islamic Republic of""",No
+Iceland,No
+Italy,No
+Jersey,No
+Jamaica,No
+Jordan,No
+Japan,Yes
+Kenya,No
+Kyrgyzstan,No
+Cambodia,No
+Kiribati,No
+Comoros,No
+"""Saint Kitts and Nevis""",No
+"""Korea, Democratic People's Republic of""",No
+"""Korea, Republic of""",No
+Kuwait,No
+"""Cayman Islands""",No
+Kazakhstan,No
+"""Lao People's Democratic Republic""",No
+Lebanon,No
+"""Saint Lucia""",No
+Liechtenstein,No
+"""Sri Lanka""",No
+Liberia,No
+Lesotho,No
+Lithuania,No
+Luxembourg,No
+Latvia,No
+"""Libyan Arab Jamahiriya""",No
+Morocco,No
+Monaco,No
+"""Moldova, Republic of""",No
+Montenegro,No
+Madagascar,No
+"""Marshall Islands""",No
+Macedonia,No
+Mali,No
+Myanmar,No
+Mongolia,No
+Macao,No
+"""Northern Mariana Islands""",No
+Martinique,No
+Mauritania,No
+Montserrat,No
+Malta,No
+Mauritius,No
+Maldives,No
+Malawi,No
+Mexico,No
+Malaysia,No
+Mozambique,No
+Namibia,No
+"""New Caledonia""",No
+Niger,No
+"""Norfolk Island""",No
+Nigeria,No
+Nicaragua,No
+Netherlands,Yes
+Norway,No
+Nepal,No
+Nauru,No
+Niue,No
+"""New Zealand""",Yes
+"""Other Country""",No
+Oman,No
+Panama,No
+Peru,No
+"""French Polynesia""",No
+"""Papua New Guinea""",No
+Philippines,No
+Pakistan,No
+Poland,No
+"""Saint Pierre and Miquelon""",No
+"""Puerto Rico""",No
+"""Palestinian Territory""",No
+Portugal,No
+Palau,No
+Paraguay,No
+Qatar,No
+Reunion,No
+Romania,No
+Serbia,No
+"""Russian Federation""",No
+Rwanda,No
+"""Saudi Arabia""",No
+"""Solomon Islands""",No
+Seychelles,No
+Sudan,No
+Sweden,No
+Singapore,No
+"""Saint Helena""",No
+Slovenia,No
+"""Svalbard and Jan Mayen""",No
+Slovakia,No
+"""Sierra Leone""",No
+"""San Marino""",No
+Senegal,No
+Somalia,No
+Suriname,No
+"""Sao Tome and Principe""",No
+"""El Salvador""",No
+"""Syrian Arab Republic""",No
+Swaziland,No
+"""Turks and Caicos Islands""",No
+Chad,No
+"""French Southern Territories""",No
+Togo,No
+Thailand,No
+Tajikistan,No
+Tokelau,No
+Turkmenistan,No
+Tunisia,No
+Tonga,No
+Turkey,No
+"""Trinidad and Tobago""",No
+Tuvalu,No
+Taiwan,No
+"""Tanzania, United Republic of""",No
+Ukraine,No
+Uganda,No
+"""United States Minor Outlying Islands""",No
+"""United States""",Yes
+Uruguay,No
+Uzbekistan,No
+"""Holy See (Vatican City State)""",No
+"""Saint Vincent and the Grenadines""",No
+Venezuela,No
+"""Virgin Islands, British""",No
+"""Virgin Islands, U.S.""",No
+Vietnam,No
+Vanuatu,No
+"""Wallis and Futuna""",No
+Samoa,No
+Yemen,No
+Mayotte,No
+"""South Africa""",No
+Zambia,No
+Zimbabwe,No
+"""Saint Martin""",No
+Pitcairn,No
+Timor-Leste,No
+Curacao,No
+"""Sint Maarten""",No
+"""Bonaire, Saint Eustatius and Saba""",No
